@@ -1,33 +1,27 @@
 {
-  "name": "ideproy",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "flatten": "^1.0.2",
-    "next": "^9.1.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "electronjs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "next build Views && next export Views",
+        "dist": "npm run build && electron-builder --dir"
+    },
+    "author": "Alexis Zelidon",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^6.0.12",
+        "electron-is-dev": "^1.1.0",
+        "electron-next": "^3.1.5"
+    },
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "flatten": "^1.0.2",
+        "gojs": "^2.0.17",
+        "jquery": "^3.4.1",
+        "next": "^9.1.1",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2"
+    }
 }
