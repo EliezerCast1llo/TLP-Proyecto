@@ -13,7 +13,14 @@ class Pestana extends Component {
         </nav>
         <div className="tab-content bg-dark text-white" id="nav-tabContent">
           <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" >
-            <GoJs />
+            <GoJs data={[{
+              category: "Start",
+              text: "Start",
+              color: '#DC3C00'
+            }, {
+              category: "End",
+              text: "End"
+            }]} />
           </div>
         </div>
 

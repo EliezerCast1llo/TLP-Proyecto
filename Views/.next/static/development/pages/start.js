@@ -492,6 +492,23 @@ module.exports = _inherits;
 
 /***/ }),
 
+/***/ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js":
+/*!*******************************************************************************!*\
+  !*** ../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
 /***/ "../node_modules/@babel/runtime-corejs2/helpers/iterableToArray.js":
 /*!*************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/iterableToArray.js ***!
@@ -5448,10 +5465,10 @@ CircularVertex:kr,CircularEdge:lr,ForceDirectedLayout:mr,ForceDirectedNetwork:nr
 
 /***/ }),
 
-/***/ "../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5CElectronNext_project%5CViews%5Cpages%5Cstart.js!./":
-/*!******************************************************************************************************************************************************************************************************!*\
-  !*** ../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5CElectronNext_project%5CViews%5Cpages%5Cstart.js ***!
-  \******************************************************************************************************************************************************************************************************/
+/***/ "../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5Cteoria%5CViews%5Cpages%5Cstart.js!./":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5Cteoria%5CViews%5Cpages%5Cstart.js ***!
+  \****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6868,7 +6885,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function App() {
   return __jsx("div", {
-    className: "jsx-2983200578" + " " + "App"
+    className: "jsx-25817452" + " " + "App"
   }, __jsx(_Components_Navigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
     mainname: "Archivo",
     titulo: "Nuevo",
@@ -6878,8 +6895,8 @@ function App() {
     n_file: "archivo.algo",
     contenido: "Contenido..."
   }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "2983200578"
-  }, ".App{text-align:center;background:#0F2027;background:-webkit-linear-gradient(to right,#2C5364,#203A43,#0F2027);background:linear-gradient(to left,#2C5364,#203A43,#0F2027);}.App-logo{height:40vmin;}.App-header{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;}.App-link{color:#09d3ac;}#blockWhite{background:#373737;width:175px;height:100px;z-index:3;display:block;position:absolute;margin-left:15px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTEVOT1ZPXFxEb2N1bWVudHNcXEVsZWN0cm9uTmV4dF9wcm9qZWN0XFxWaWV3c1xccGFnZXNcXEFwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFheUIsQUFHeUIsQUFPSixBQUlHLEFBVUgsQUFJRyxjQWpCckIsQUFjQSxHQVZpQixDQVhNLENBeUJULFlBQ0MsTUF6QjZELE9BMEJoRSxVQUNJLGNBQ0ksa0JBQ0QsS0FsQk8sWUFvQjVCLEdBOUJxRSw0REFDbkUsR0FVdUIsNkZBQ0ksbUdBQ00sNkJBQ2pCLFlBQ2hCIiwiZmlsZSI6IkM6XFxVc2Vyc1xcTEVOT1ZPXFxEb2N1bWVudHNcXEVsZWN0cm9uTmV4dF9wcm9qZWN0XFxWaWV3c1xccGFnZXNcXEFwcC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbi8vaW1wb3J0ICcuL0FwcC5jc3MnO1xyXG5cclxuaW1wb3J0IE5hdmlnYXRpb24gZnJvbSAnLi9Db21wb25lbnRzL05hdmlnYXRpb24nO1xyXG5pbXBvcnQgUGVzdGFuYSBmcm9tICcuL0NvbXBvbmVudHMvUGVzdGFuYSc7XHJcblxyXG5cclxuZnVuY3Rpb24gQXBwKCkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8ZGl2IGNsYXNzTmFtZT1cIkFwcFwiPlxyXG4gICAgICA8TmF2aWdhdGlvbiBtYWlubmFtZT1cIkFyY2hpdm9cIiB0aXR1bG89XCJOdWV2b1wiIHRpdHVsbzI9XCJHdWFyZGFyXCIgdGl0dWxvMz1cIkNlcnJhclwiIC8+XHJcbiAgICAgIDxQZXN0YW5hIG5fZmlsZT1cImFyY2hpdm8uYWxnb1wiIGNvbnRlbmlkbz1cIkNvbnRlbmlkby4uLlwiIC8+XHJcblxyXG4gICAgICA8c3R5bGUganN4IGdsb2JhbD57YFxyXG4gICAgLkFwcCB7XHJcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgICAgYmFja2dyb3VuZDogIzBGMjAyNztcclxuICAgICAgYmFja2dyb3VuZDogLXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMyQzUzNjQsICMyMDNBNDMsICMwRjIwMjcpO1xyXG4gICAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gbGVmdCwgIzJDNTM2NCwgIzIwM0E0MywgIzBGMjAyNyk7XHJcbiAgfVxyXG4gIFxyXG4gIC5BcHAtbG9nbyB7XHJcbiAgICAgIGhlaWdodDogNDB2bWluO1xyXG4gIH1cclxuICBcclxuICAuQXBwLWhlYWRlciB7XHJcbiAgICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgICAgZm9udC1zaXplOiBjYWxjKDEwcHggKyAydm1pbik7XHJcbiAgICAgIGNvbG9yOiB3aGl0ZTtcclxuICB9XHJcbiAgXHJcbiAgLkFwcC1saW5rIHtcclxuICAgICAgY29sb3I6ICMwOWQzYWM7XHJcbiAgfVxyXG5cclxuICAjYmxvY2tXaGl0ZSB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMzczNzM3O1xyXG4gICAgd2lkdGg6IDE3NXB4O1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHotaW5kZXg6IDM7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxNXB4O1xyXG5cclxufVxyXG4gICAgYH08L3N0eWxlPlxyXG4gICAgPC9kaXY+XHJcbiAgKTtcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgQXBwO1xyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\LENOVO\\Documents\\ElectronNext_project\\Views\\pages\\App.js */"));
+    id: "25817452"
+  }, ".App{text-align:center;background:#0F2027;background:-webkit-linear-gradient(to right,#2C5364,#203A43,#0F2027);background:linear-gradient(to left,#2C5364,#203A43,#0F2027);}.App-logo{height:40vmin;}.App-header{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;}.App-link{color:#09d3ac;}#blockWhites{background:#373737;width:175px;height:100px;z-index:3;display:block;position:absolute;margin-left:15px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTEVOT1ZPXFxEb2N1bWVudHNcXHRlb3JpYVxcVmlld3NcXHBhZ2VzXFxBcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBYXlCLEFBR3lCLEFBT0osQUFJRyxBQVVILEFBSUcsY0FqQnJCLEFBY0EsR0FWaUIsQ0FYTSxDQXlCVCxZQUNDLE1BekI2RCxPQTBCaEUsVUFDSSxjQUNJLGtCQUNELEtBbEJPLFlBb0I1QixHQTlCcUUsNERBQ25FLEdBVXVCLDZGQUNJLG1HQUNNLDZCQUNqQixZQUNoQiIsImZpbGUiOiJDOlxcVXNlcnNcXExFTk9WT1xcRG9jdW1lbnRzXFx0ZW9yaWFcXFZpZXdzXFxwYWdlc1xcQXBwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuLy9pbXBvcnQgJy4vQXBwLmNzcyc7XHJcblxyXG5pbXBvcnQgTmF2aWdhdGlvbiBmcm9tICcuL0NvbXBvbmVudHMvTmF2aWdhdGlvbic7XHJcbmltcG9ydCBQZXN0YW5hIGZyb20gJy4vQ29tcG9uZW50cy9QZXN0YW5hJztcclxuXHJcblxyXG5mdW5jdGlvbiBBcHAoKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPVwiQXBwXCI+XHJcbiAgICAgIDxOYXZpZ2F0aW9uIG1haW5uYW1lPVwiQXJjaGl2b1wiIHRpdHVsbz1cIk51ZXZvXCIgdGl0dWxvMj1cIkd1YXJkYXJcIiB0aXR1bG8zPVwiQ2VycmFyXCIgLz5cclxuICAgICAgPFBlc3RhbmEgbl9maWxlPVwiYXJjaGl2by5hbGdvXCIgY29udGVuaWRvPVwiQ29udGVuaWRvLi4uXCIgLz5cclxuXHJcbiAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXHJcbiAgICAuQXBwIHtcclxuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgICBiYWNrZ3JvdW5kOiAjMEYyMDI3O1xyXG4gICAgICBiYWNrZ3JvdW5kOiAtd2Via2l0LWxpbmVhci1ncmFkaWVudCh0byByaWdodCwgIzJDNTM2NCwgIzIwM0E0MywgIzBGMjAyNyk7XHJcbiAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byBsZWZ0LCAjMkM1MzY0LCAjMjAzQTQzLCAjMEYyMDI3KTtcclxuICB9XHJcbiAgXHJcbiAgLkFwcC1sb2dvIHtcclxuICAgICAgaGVpZ2h0OiA0MHZtaW47XHJcbiAgfVxyXG4gIFxyXG4gIC5BcHAtaGVhZGVyIHtcclxuICAgICAgbWluLWhlaWdodDogMTAwdmg7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgICBmb250LXNpemU6IGNhbGMoMTBweCArIDJ2bWluKTtcclxuICAgICAgY29sb3I6IHdoaXRlO1xyXG4gIH1cclxuICBcclxuICAuQXBwLWxpbmsge1xyXG4gICAgICBjb2xvcjogIzA5ZDNhYztcclxuICB9XHJcblxyXG4gICNibG9ja1doaXRlcyB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMzczNzM3O1xyXG4gICAgd2lkdGg6IDE3NXB4O1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHotaW5kZXg6IDM7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxNXB4O1xyXG5cclxufVxyXG4gICAgYH08L3N0eWxlPlxyXG4gICAgPC9kaXY+XHJcbiAgKTtcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgQXBwO1xyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\LENOVO\\Documents\\teoria\\Views\\pages\\App.js */"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -6907,6 +6924,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gojs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! gojs */ "../node_modules/gojs/release/go.js");
 /* harmony import */ var gojs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(gojs__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _figure__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./figure */ "./pages/Components/figure.js");
+/* harmony import */ var _modelsDfd__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modelsDfd */ "./pages/Components/modelsDfd.js");
+/* harmony import */ var _modelsDfd__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modelsDfd__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _functionsDfd__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./functionsDfd */ "./pages/Components/functionsDfd.js");
+/* harmony import */ var _functionsDfd__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_functionsDfd__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _nodeTemplate__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./nodeTemplate */ "./pages/Components/nodeTemplate.js");
+/* harmony import */ var _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_nodeTemplate__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -6916,6 +6939,9 @@ __webpack_require__.r(__webpack_exports__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
  //import './App.css';
+
+
+
 
 
 var $ = gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GraphObject.make;
@@ -6944,312 +6970,58 @@ function (_Component) {
     key: "renderCanvas",
     value: function renderCanvas() {
       myDiagram = $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Diagram, this.refs.goJsDiv, {
-        "LinkDrawn": this.showLinkLabel,
+        grid: $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Grid", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "LineH", {
+          stroke: "gray",
+          strokeWidth: .9
+        }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "LineH", {
+          stroke: "darkslategray",
+          strokeWidth: 1.5,
+          interval: 10
+        }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "LineV", {
+          stroke: "gray",
+          strokeWidth: .9
+        }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "LineV", {
+          stroke: "darkslategray",
+          strokeWidth: 1.5,
+          interval: 10
+        })),
+        "LinkDrawn": _functionsDfd__WEBPACK_IMPORTED_MODULE_10___default.a.showLinkLabel,
         // this DiagramEvent listener is defined below
-        "LinkRelinked": this.showLinkLabel,
+        "LinkRelinked": _functionsDfd__WEBPACK_IMPORTED_MODULE_10___default.a.showLinkLabel,
         "toolManager.mouseWheelBehavior": gojs__WEBPACK_IMPORTED_MODULE_7___default.a.ToolManager.WheelZoom,
+        "draggingTool.isGridSnapEnabled": true,
         "undoManager.isEnabled": true // enable undo & redo
 
       }); // define the Node templates for regular nodes
 
-      myDiagram.nodeTemplateMap.add("", // the default category
-      $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
-      $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "Rectangle", new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("fill", "color"), {
-        fill: "#00A9C9",
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("figure", "figure")), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        margin: 8,
-        maxSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(160, NaN),
-        wrap: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock.WrapFit,
-        editable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text").makeTwoWay())), // four named ports, one on each side:
-      this.makePort("T", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.TopSide, false, true), this.makePort("L", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.LeftSide, true, true), this.makePort("R", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.RightSide, true, true), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.BottomSide, true, false)));
-      myDiagram.nodeTemplateMap.add("Conditional", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
-      $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "Diamond", {
-        fill: "#00A9C9",
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("figure", "figure")), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        margin: 8,
-        maxSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(160, NaN),
-        wrap: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock.WrapFit,
-        editable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text").makeTwoWay())), // four named ports, one on each side:
-      this.makePort("T", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, false, true), this.makePort("L", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, true, true), this.makePort("R", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, true, true), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, true, false)));
-      myDiagram.nodeTemplateMap.add("Start", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "Circle", new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("fill", "color"), {
-        minSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(40, 40),
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, "Start", this.textStyle(), new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text"))), // three named ports, one on each side except the top, all output only:
+      myDiagram.nodeTemplateMap.add("", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.defaultGraph()); // the default category
 
-      /* this.makePort("L", go.Spot.Left, go.Spot.Left, true, false),
-       this.makePort("R", go.Spot.Right, go.Spot.Right, true, false),*/
-      this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, true, false)));
-      myDiagram.nodeTemplateMap.add("Var", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "square", new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("fill", "color"), {
-        minSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(40, 40),
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        editable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text"))), // three named ports, one on each side except the top, all output only:
-      this.makePort("T", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.TopSide, false, true), this.makePort("L", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.LeftSide, true, true), this.makePort("R", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.RightSide, true, true), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.BottomSide, true, false)));
-      myDiagram.nodeTemplateMap.add("If", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "RightTriangle", new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("fill", "color"), {
-        // angle: 65,
-        // geometryString: "F M140 0 L70 70 0 50z",
-        minSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(80, 80),
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        editable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text"))), // three named ports, one on each side except the top, all output only:
-      this.makePort("T", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, false, true), this.makePort("L", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, true, false), this.makePort("R", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, true, false), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, true, false)));
-      myDiagram.groupTemplate = $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Group, "Auto", {
-        resizable: true,
-        resizeObjectName: "PH"
-      }, $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "RoundedRectangle", {
-        fill: "rgba(128,128,128,0.33)",
-        name: "PH"
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("desiredSize", "size", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size.parse).makeTwoWay(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size.stringify)), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Placeholder, // represents the area of all member parts,
-      {
-        padding: 3
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, {
-        alignment: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right,
-        font: "Bold 12pt Sans-Serif"
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text"))), //three named ports, one on each side except the top, all output only:
-      this.makePort("T", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, false, true), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, true, false));
-      myDiagram.nodeTemplateMap.add("case", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("location", "loc", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Point.parse), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "RoundedRectangle", new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("fill", "color"), {
-        // angle: 65,
-        // geometryString: "F M140 0 L70 70 0 50z",
-        //minSize: new go.Size(80, 80),
-        fromSpot: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom,
-        toSpot: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top,
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        editable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text"))), // three named ports, one on each side except the top, all output only:
-      this.makePort("T", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, false, true), this.makePort("L", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, true, false), this.makePort("R", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, true, false), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, true, false)));
-      myDiagram.nodeTemplateMap.add("switch", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "octagon", new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("fill", "color"), {
-        toSpot: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom,
-        minSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(80, 80),
-        strokeWidth: 0
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        editable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text"))), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, true, false)));
-      myDiagram.nodeTemplateMap.add("for", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Spot", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "Rectangle", {
-        fill: "",
-        minSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(140, 40),
-        strokeWidth: 0
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "TriangleLeft", {
-        width: 20,
-        height: 40,
-        fill: "black",
-        alignment: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "Rectangle", {
-        width: 120,
-        height: 40,
-        fill: "black"
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "TriangleRight", {
-        width: 20,
-        height: 40,
-        fill: "black",
-        alignment: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        text: "Inicio",
-        font: "bold 8pt Helvetica, Arial, sans-serif",
-        position: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Point(0, 0)
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        editable: true,
-        text: "3",
-        font: "bold 8pt Helvetica, Arial, sans-serif",
-        position: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Point(200, 0)
-      }), this.makePort("B", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom, true, false)));
-      myDiagram.nodeTemplateMap.add("End", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Table", this.nodeStyle(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "Circle", {
-        minSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(40, 40),
-        fill: "#DC3C00",
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, "End", this.textStyle(), new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text"))), // three named ports, one on each side except the bottom, all input only:
-      this.makePort("T", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top, false, true), this.makePort("L", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Left, false, true), this.makePort("R", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Right, false, true))); // taken from ../extensions/Figures.js:
+      myDiagram.nodeTemplateMap.add("Conditional", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.conditionalGraph());
+      myDiagram.nodeTemplateMap.add("Start", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.startGraph());
+      myDiagram.nodeTemplateMap.add("Var", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.varGraph());
+      myDiagram.nodeTemplateMap.add("If", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.ifGraph());
+      myDiagram.nodeTemplateMap.add("case", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.caseGraph());
+      myDiagram.nodeTemplateMap.add("switch", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.switchGraph());
+      myDiagram.nodeTemplateMap.add("for", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.forGraph());
+      myDiagram.nodeTemplateMap.add("End", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.endGraph());
+      myDiagram.nodeTemplateMap.add("Comment", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.commentGraph());
+      myDiagram.groupTemplate = _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.groupGraph(); // replace the default Link template in the linkTemplateMap
 
-      gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape.defineFigureGenerator("File", function (shape, w, h) {
-        var geo = new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Geometry();
-        var fig = new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathFigure(0, 0, true); // starting point
-
-        geo.add(fig);
-        fig.add(new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment.Line, .75 * w, 0));
-        fig.add(new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment.Line, w, .25 * h));
-        fig.add(new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment.Line, w, h));
-        fig.add(new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment.Line, 0, h).close());
-        var fig2 = new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathFigure(.75 * w, 0, false);
-        geo.add(fig2); // The Fold
-
-        fig2.add(new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment.Line, .75 * w, .25 * h));
-        fig2.add(new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.PathSegment.Line, w, .25 * h));
-        geo.spot1 = new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot(0, .25);
-        geo.spot2 = gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.BottomRight;
-        return geo;
-      });
-      myDiagram.nodeTemplateMap.add("Comment", $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Node, "Auto", this.nodeStyle(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "File", {
-        fill: "#DEE0A3",
-        strokeWidth: 0,
-        portId: "",
-        fromLinkable: true,
-        toLinkable: true
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, this.textStyle(), {
-        margin: 5,
-        maxSize: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Size(200, NaN),
-        wrap: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock.WrapFit,
-        textAlign: "center",
-        editable: true,
-        font: "bold 12pt Helvetica, Arial, sans-serif",
-        stroke: '#454545'
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text").makeTwoWay()) // no ports, because no links are allowed to connect with a comment
-      )); // replace the default Link template in the linkTemplateMap
-
-      myDiagram.linkTemplate = $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Link, // the whole link panel
-      {
-        routing: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Link.AvoidsNodes,
-        curve: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Link.JumpOver,
-        corner: 5,
-        toShortLength: 4,
-        relinkableFrom: true,
-        relinkableTo: true,
-        reshapable: true,
-        resegmentable: true,
-        selectionAdorned: false
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("points").makeTwoWay(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, // the highlight shape, normally transparent
-      {
-        isPanelMain: true,
-        strokeWidth: 8,
-        stroke: "transparent",
-        name: "HIGHLIGHT"
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, // the link path shape
-      {
-        isPanelMain: true,
-        stroke: "gray",
-        strokeWidth: 2
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("stroke", "isSelected", function (sel) {
-        return sel ? "dodgerblue" : "gray";
-      }).ofObject()), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, // the arrowhead
-      {
-        toArrow: "standard",
-        strokeWidth: 0,
-        fill: "gray"
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Panel, "Auto", // the link label, normally not visible
-      {
-        visible: false,
-        name: "LABEL",
-        segmentIndex: 2,
-        segmentFraction: 0.5
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("visible", "visible").makeTwoWay(), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, "RoundedRectangle", // the label shape
-      {
-        fill: "#F8F8F8",
-        strokeWidth: 0
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.TextBlock, "Yes", // the label
-      {
-        textAlign: "center",
-        font: "10pt helvetica, arial, sans-serif",
-        stroke: "#333333",
-        editable: true
-      }, new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("text").makeTwoWay()))); // temporary links used by LinkingTool and RelinkingTool are also orthogonal:
+      myDiagram.linkTemplate = _functionsDfd__WEBPACK_IMPORTED_MODULE_10___default.a.linkTemplate(); // temporary links used by LinkingTool and RelinkingTool are also orthogonal:
 
       myDiagram.toolManager.linkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Link.Orthogonal;
       myDiagram.toolManager.relinkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Link.Orthogonal; // initialize the Palette that is on the left side of the page
 
-      $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Palette, "Diamond", // must name or refer to the DIV HTML element
+      var myPalette = $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Palette, "Diamond", // must name or refer to the DIV HTML element
       {
+        layout: $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GridLayout, {
+          alignment: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GridLayout.Location
+        }),
         nodeTemplateMap: myDiagram.nodeTemplateMap,
         // share the templates used by myDiagram
-        model: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GraphLinksModel([// specify the contents of the Palette
-        {
-          category: "Start",
-          text: "Start",
-          color: '#DC3C00'
-        }, {
-          category: "Var",
-          text: "INT",
-          color: 'blue'
-        }, {
-          category: "Var",
-          text: "CHAR",
-          color: 'green'
-        }, {
-          category: "Var",
-          text: "FLOAT",
-          color: 'yellow'
-        }, {
-          category: "Var",
-          text: "STRING",
-          color: 'red'
-        }, {
-          category: "Var",
-          text: "VECTOR",
-          color: 'gray'
-        }, {
-          category: "If",
-          text: "IF",
-          color: 'gray'
-        }, {
-          key: 'en',
-          category: "switch",
-          text: "SWITCH",
-          color: 'gray',
-          group: 'sw'
-        }, {
-          key: 'case',
-          category: "case",
-          text: "Case",
-          color: 'red',
-          group: 'sw'
-        }, {
-          key: 'sw',
-          text: "SWITCH",
-          color: 'gray',
-          size: "180 300",
-          isGroup: true
-        }, {
-          key: 'stp',
-          text: "Instrucción",
-          group: 'sw'
-        }, {
-          category: "for",
-          color: 'red',
-          text: "For"
-        }, {
-          text: "Instrucción"
-        }, {
-          category: "Conditional",
-          text: "If-Else"
-        }, {
-          category: "End",
-          text: "End"
-        }, {
-          category: "Comment",
-          text: "Comment"
-        }], [{
-          from: "en",
-          to: "case"
-        }, {
-          from: "case",
-          to: "stp"
-        }])
+        model: new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GraphLinksModel(_modelsDfd__WEBPACK_IMPORTED_MODULE_9___default.a.modelsData(), _modelsDfd__WEBPACK_IMPORTED_MODULE_9___default.a.modelsLinks())
       });
+      myPalette.layout.sorting = gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GridLayout.Forward;
     }
   }, {
     key: "componentDidMount",
@@ -7307,72 +7079,6 @@ function (_Component) {
         className: "btn btn-primary",
         onClick: this.onClickChange
       }, "Save")));
-    }
-  }, {
-    key: "makePort",
-    value: function makePort(name, align, spot, output, input) {
-      var horizontal = align.equals(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Top) || align.equals(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Bottom); // the port is basically just a transparent rectangle that stretches along the side of the node,
-      // and becomes colored when the mouse passes over it
-
-      return $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Shape, {
-        fill: "transparent",
-        // changed to a color in the mouseEnter event handler
-        strokeWidth: 0,
-        // no stroke
-        width: horizontal ? NaN : 8,
-        // if not stretching horizontally, just 8 wide
-        height: !horizontal ? NaN : 8,
-        // if not stretching vertically, just 8 tall
-        alignment: align,
-        // align the port on the main Shape
-        stretch: horizontal ? gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GraphObject.Horizontal : gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GraphObject.Vertical,
-        portId: name,
-        // declare this object to be a "port"
-        fromSpot: spot,
-        // declare where links may connect at this port
-        fromLinkable: output,
-        // declare whether the user may draw links from here
-        toSpot: spot,
-        // declare where links may connect at this port
-        toLinkable: input,
-        // declare whether the user may draw links to here
-        cursor: "pointer",
-        // show a different cursor to indicate potential link point
-        mouseEnter: function mouseEnter(e, port) {
-          // the PORT argument will be this Shape
-          if (!e.diagram.isReadOnly) port.fill = "#00abe469";
-        },
-        mouseLeave: function mouseLeave(e, port) {
-          port.fill = "transparent";
-        }
-      });
-    }
-  }, {
-    key: "textStyle",
-    value: function textStyle() {
-      return {
-        font: "bold 11pt Helvetica, Arial, sans-serif",
-        margin: 2,
-        stroke: "whitesmoke"
-      };
-    }
-  }, {
-    key: "nodeStyle",
-    value: function nodeStyle() {
-      return [// The Node.location comes from the "loc" property of the node data,
-      // converted by the Point.parse static method.
-      // If the Node.location is changed, it updates the "loc" property of the node data,
-      // converting back using the Point.stringify static method.
-      new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Binding("location", "loc", gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Point.parse).makeTwoWay(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Point.stringify), {
-        // the Node.location is at the center of each node
-        locationSpot: gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Spot.Center
-      }];
-    }
-  }, {
-    key: "showLinkLabel",
-    value: function showLinkLabel(e) {
-      var label = e.subject.findObject("LABEL");
-      if (label !== null) label.visible = e.subject.fromNode.data.category === "Conditional";
     }
   }]);
 
@@ -7540,7 +7246,16 @@ function (_Component) {
         id: "nav-home",
         role: "tabpanel",
         "aria-labelledby": "nav-home-tab"
-      }, __jsx(_Dfd_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null))));
+      }, __jsx(_Dfd_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        data: [{
+          category: "Start",
+          text: "Start",
+          color: '#DC3C00'
+        }, {
+          category: "End",
+          text: "End"
+        }]
+      }))));
     }
   }]);
 
@@ -12482,6 +12197,459 @@ gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape.defineFigureGenerator("Subrout
 
 /***/ }),
 
+/***/ "./pages/Components/functionsDfd.js":
+/*!******************************************!*\
+  !*** ./pages/Components/functionsDfd.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+var _gojs = _interopRequireDefault(__webpack_require__(/*! gojs */ "../node_modules/gojs/release/go.js"));
+
+var $ = _gojs["default"].GraphObject.make;
+
+function linkTemplate() {
+  var template = $(_gojs["default"].Link, // the whole link panel
+  {
+    routing: _gojs["default"].Link.AvoidsNodes,
+    curve: _gojs["default"].Link.JumpOver,
+    corner: 5,
+    toShortLength: 4,
+    relinkableFrom: true,
+    relinkableTo: true,
+    reshapable: true,
+    resegmentable: true,
+    selectionAdorned: false
+  }, new _gojs["default"].Binding("points").makeTwoWay(), $(_gojs["default"].Shape, // the highlight shape, normally transparent
+  {
+    isPanelMain: true,
+    strokeWidth: 8,
+    stroke: "transparent",
+    name: "HIGHLIGHT"
+  }), $(_gojs["default"].Shape, // the link path shape
+  {
+    isPanelMain: true,
+    stroke: "gray",
+    strokeWidth: 2
+  }, new _gojs["default"].Binding("stroke", "isSelected", function (sel) {
+    return sel ? "dodgerblue" : "gray";
+  }).ofObject()), $(_gojs["default"].Shape, // the arrowhead
+  {
+    toArrow: "standard",
+    strokeWidth: 0,
+    fill: "gray"
+  }), $(_gojs["default"].Panel, "Auto", // the link label, normally not visible
+  {
+    visible: false,
+    name: "LABEL",
+    segmentIndex: 2,
+    segmentFraction: 0.5
+  }, new _gojs["default"].Binding("visible", "visible").makeTwoWay(), $(_gojs["default"].Shape, "RoundedRectangle", // the label shape
+  {
+    fill: "#F8F8F8",
+    strokeWidth: 0
+  }), $(_gojs["default"].TextBlock, "Yes", // the label
+  {
+    textAlign: "center",
+    font: "10pt helvetica, arial, sans-serif",
+    stroke: "#333333",
+    editable: true
+  }, new _gojs["default"].Binding("text").makeTwoWay())));
+  return template;
+}
+
+function makePort(name, align, spot, output, input) {
+  var horizontal = align.equals(_gojs["default"].Spot.Top) || align.equals(_gojs["default"].Spot.Bottom); // the port is basically just a transparent rectangle that stretches along the side of the node,
+  // and becomes colored when the mouse passes over it
+
+  return $(_gojs["default"].Shape, {
+    fill: "transparent",
+    // changed to a color in the mouseEnter event handler
+    strokeWidth: 0,
+    // no stroke
+    width: horizontal ? NaN : 8,
+    // if not stretching horizontally, just 8 wide
+    height: !horizontal ? NaN : 8,
+    // if not stretching vertically, just 8 tall
+    alignment: align,
+    // align the port on the main Shape
+    stretch: horizontal ? _gojs["default"].GraphObject.Horizontal : _gojs["default"].GraphObject.Vertical,
+    portId: name,
+    // declare this object to be a "port"
+    fromSpot: spot,
+    // declare where links may connect at this port
+    fromLinkable: output,
+    // declare whether the user may draw links from here
+    toSpot: spot,
+    // declare where links may connect at this port
+    toLinkable: input,
+    // declare whether the user may draw links to here
+    cursor: "pointer",
+    // show a different cursor to indicate potential link point
+    mouseEnter: function mouseEnter(e, port) {
+      // the PORT argument will be this Shape
+      if (!e.diagram.isReadOnly) port.fill = "#00abe469";
+    },
+    mouseLeave: function mouseLeave(e, port) {
+      port.fill = "transparent";
+    }
+  });
+}
+
+function showLinkLabel(e) {
+  var label = e.subject.findObject("LABEL");
+  if (label !== null) label.visible = e.subject.fromNode.data.category === "Conditional";
+}
+
+function nodeStyle() {
+  return [// The Node.location comes from the "loc" property of the node data,
+  // converted by the Point.parse static method.
+  // If the Node.location is changed, it updates the "loc" property of the node data,
+  // converting back using the Point.stringify static method.
+  new _gojs["default"].Binding("location", "loc", _gojs["default"].Point.parse).makeTwoWay(_gojs["default"].Point.stringify), {
+    // the Node.location is at the center of each node
+    locationSpot: _gojs["default"].Spot.Center
+  }];
+}
+
+function textStyle() {
+  return {
+    font: "bold 11pt Helvetica, Arial, sans-serif",
+    margin: 2,
+    stroke: "whitesmoke"
+  };
+}
+
+module.exports = {
+  linkTemplate: linkTemplate,
+  makePort: makePort,
+  showLinkLabel: showLinkLabel,
+  nodeStyle: nodeStyle,
+  textStyle: textStyle
+};
+
+/***/ }),
+
+/***/ "./pages/Components/modelsDfd.js":
+/*!***************************************!*\
+  !*** ./pages/Components/modelsDfd.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function modelsData() {
+  return [// specify the contents of the Palette
+  {
+    category: "Start",
+    text: "Start",
+    color: '#DC3C00'
+  }, {
+    category: "Var",
+    text: "INT",
+    color: 'blue'
+  }, {
+    category: "Var",
+    text: "CHAR",
+    color: 'green'
+  }, {
+    category: "Var",
+    text: "FLOAT",
+    color: 'yellow'
+  }, {
+    category: "Var",
+    text: "STRING",
+    color: 'red'
+  }, {
+    category: "Var",
+    text: "VECTOR",
+    color: 'gray'
+  }, {
+    category: "If",
+    text: "IF",
+    color: 'gray'
+  },
+  /*{
+      key: 'en',
+      category: "switch",
+      text: "SWITCH",
+      color: 'gray',
+      group: 'sw'
+  },
+  {
+      key: 'case',
+      category: "case",
+      text: "Case",
+      color: 'red',
+      group: 'sw'
+  },
+  {
+      key: 'sw',
+      text: "SWITCH",
+      color: 'gray',
+      size: "180 300",
+      isGroup: true
+  },
+  {
+      key: 'stp',
+      text: "Instrucción",
+      group: 'sw'
+  },*/
+  {
+    category: "for",
+    color: 'red',
+    text: "For"
+  }, {
+    text: "Instrucción"
+  }, {
+    category: "Conditional",
+    text: "If-Else"
+  }, {
+    category: "End",
+    text: "End"
+  }, {
+    category: "Comment",
+    text: "Comment"
+  }];
+}
+
+function modelsLinks() {
+  return [{
+    from: "en",
+    to: "case"
+  }, {
+    from: "case",
+    to: "stp"
+  }];
+}
+
+module.exports = {
+  modelsData: modelsData,
+  modelsLinks: modelsLinks
+};
+
+/***/ }),
+
+/***/ "./pages/Components/nodeTemplate.js":
+/*!******************************************!*\
+  !*** ./pages/Components/nodeTemplate.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+var _gojs = _interopRequireDefault(__webpack_require__(/*! gojs */ "../node_modules/gojs/release/go.js"));
+
+var _functionsDfd = _interopRequireDefault(__webpack_require__(/*! ./functionsDfd */ "./pages/Components/functionsDfd.js"));
+
+var $ = _gojs["default"].GraphObject.make; // the default category
+
+function defaultGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
+  $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "Rectangle", new _gojs["default"].Binding("fill", "color"), {
+    fill: "#00A9C9",
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }, new _gojs["default"].Binding("figure", "figure")), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    margin: 8,
+    maxSize: new _gojs["default"].Size(160, NaN),
+    wrap: _gojs["default"].TextBlock.WrapFit,
+    editable: true
+  }, new _gojs["default"].Binding("text").makeTwoWay())), // four named ports, one on each side:
+  _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.TopSide, false, true), _functionsDfd["default"].makePort("L", _gojs["default"].Spot.Left, _gojs["default"].Spot.LeftSide, true, true), _functionsDfd["default"].makePort("R", _gojs["default"].Spot.Right, _gojs["default"].Spot.RightSide, true, true), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.BottomSide, true, false));
+}
+
+function conditionalGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
+  $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "Diamond", {
+    fill: "#00A9C9",
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }, new _gojs["default"].Binding("figure", "figure")), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    margin: 8,
+    maxSize: new _gojs["default"].Size(160, NaN),
+    wrap: _gojs["default"].TextBlock.WrapFit,
+    editable: true
+  }, new _gojs["default"].Binding("text").makeTwoWay())), // four named ports, one on each side:
+  _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.Top, false, true), _functionsDfd["default"].makePort("L", _gojs["default"].Spot.Left, _gojs["default"].Spot.Left, true, true), _functionsDfd["default"].makePort("R", _gojs["default"].Spot.Right, _gojs["default"].Spot.Right, true, true), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
+}
+
+function startGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "Circle", new _gojs["default"].Binding("fill", "color"), {
+    minSize: new _gojs["default"].Size(40, 40),
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }), $(_gojs["default"].TextBlock, "Start", _functionsDfd["default"].textStyle(), new _gojs["default"].Binding("text"))), // three named ports, one on each side except the top, all output only:
+
+  /* this.makePort("L", go.Spot.Left, go.Spot.Left, true, false),
+   this.makePort("R", go.Spot.Right, go.Spot.Right, true, false),*/
+  _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
+}
+
+function varGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "square", new _gojs["default"].Binding("fill", "color"), {
+    minSize: new _gojs["default"].Size(40, 40),
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    editable: true
+  }, new _gojs["default"].Binding("text"))), // three named ports, one on each side except the top, all output only:
+  _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.TopSide, false, true), _functionsDfd["default"].makePort("L", _gojs["default"].Spot.Left, _gojs["default"].Spot.LeftSide, true, true), _functionsDfd["default"].makePort("R", _gojs["default"].Spot.Right, _gojs["default"].Spot.RightSide, true, true), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.BottomSide, true, false));
+}
+
+function ifGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "RightTriangle", new _gojs["default"].Binding("fill", "color"), {
+    // angle: 65,
+    // geometryString: "F M140 0 L70 70 0 50z",
+    minSize: new _gojs["default"].Size(80, 80),
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    editable: true
+  }, new _gojs["default"].Binding("text"))), // three named ports, one on each side except the top, all output only:
+  _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.Top, false, true), _functionsDfd["default"].makePort("L", _gojs["default"].Spot.Left, _gojs["default"].Spot.Left, true, false), _functionsDfd["default"].makePort("R", _gojs["default"].Spot.Right, _gojs["default"].Spot.Right, true, false), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
+}
+
+function caseGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), new _gojs["default"].Binding("location", "loc", _gojs["default"].Point.parse), $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "RoundedRectangle", new _gojs["default"].Binding("fill", "color"), {
+    // angle: 65,
+    // geometryString: "F M140 0 L70 70 0 50z",
+    //minSize: new go.Size(80, 80),
+    fromSpot: _gojs["default"].Spot.Bottom,
+    toSpot: _gojs["default"].Spot.Top,
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    editable: true
+  }, new _gojs["default"].Binding("text"))), // three named ports, one on each side except the top, all output only:
+  _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.Top, false, true), _functionsDfd["default"].makePort("L", _gojs["default"].Spot.Left, _gojs["default"].Spot.Left, true, false), _functionsDfd["default"].makePort("R", _gojs["default"].Spot.Right, _gojs["default"].Spot.Right, true, false), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
+}
+
+function switchGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "octagon", new _gojs["default"].Binding("fill", "color"), {
+    toSpot: _gojs["default"].Spot.Bottom,
+    minSize: new _gojs["default"].Size(80, 80),
+    strokeWidth: 0
+  }), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    editable: true
+  }, new _gojs["default"].Binding("text"))), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
+}
+
+function forGraph() {
+  return $(_gojs["default"].Node, "Spot", $(_gojs["default"].Shape, "Rectangle", {
+    fill: "",
+    minSize: new _gojs["default"].Size(140, 40),
+    strokeWidth: 0
+  }), $(_gojs["default"].Shape, "TriangleLeft", {
+    width: 20,
+    height: 40,
+    fill: "black",
+    alignment: _gojs["default"].Spot.Left
+  }), $(_gojs["default"].Shape, "Rectangle", {
+    width: 120,
+    height: 40,
+    fill: "black"
+  }), $(_gojs["default"].Shape, "TriangleRight", {
+    width: 20,
+    height: 40,
+    fill: "black",
+    alignment: _gojs["default"].Spot.Right
+  }), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    text: "Inicio",
+    font: "bold 8pt Helvetica, Arial, sans-serif",
+    position: new _gojs["default"].Point(0, 0)
+  }), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    editable: true,
+    text: "3",
+    font: "bold 8pt Helvetica, Arial, sans-serif",
+    position: new _gojs["default"].Point(200, 0)
+  }), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
+}
+
+function endGraph() {
+  return $(_gojs["default"].Node, "Table", _functionsDfd["default"].nodeStyle(), $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "Circle", {
+    minSize: new _gojs["default"].Size(40, 40),
+    fill: "#DC3C00",
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }), $(_gojs["default"].TextBlock, "End", _functionsDfd["default"].textStyle(), new _gojs["default"].Binding("text"))), // three named ports, one on each side except the bottom, all input only:
+  _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.Top, false, true), _functionsDfd["default"].makePort("L", _gojs["default"].Spot.Left, _gojs["default"].Spot.Left, false, true), _functionsDfd["default"].makePort("R", _gojs["default"].Spot.Right, _gojs["default"].Spot.Right, false, true));
+}
+
+function commentGraph() {
+  return $(_gojs["default"].Node, "Auto", _functionsDfd["default"].nodeStyle(), $(_gojs["default"].Shape, "File", {
+    fill: "#DEE0A3",
+    strokeWidth: 0,
+    portId: "",
+    fromLinkable: true,
+    toLinkable: true
+  }), $(_gojs["default"].TextBlock, _functionsDfd["default"].textStyle(), {
+    margin: 5,
+    maxSize: new _gojs["default"].Size(200, NaN),
+    wrap: _gojs["default"].TextBlock.WrapFit,
+    textAlign: "center",
+    editable: true,
+    font: "bold 12pt Helvetica, Arial, sans-serif",
+    stroke: '#454545'
+  }, new _gojs["default"].Binding("text").makeTwoWay()) // no ports, because no links are allowed to connect with a comment
+  );
+}
+
+function groupGraph() {
+  return $(_gojs["default"].Group, "Auto", {
+    resizable: true,
+    resizeObjectName: "PH"
+  }, $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "RoundedRectangle", {
+    fill: "rgba(128,128,128,0.33)",
+    name: "PH"
+  }, new _gojs["default"].Binding("desiredSize", "size", _gojs["default"].Size.parse).makeTwoWay(_gojs["default"].Size.stringify)), $(_gojs["default"].Placeholder, // represents the area of all member parts,
+  {
+    padding: 3
+  }), $(_gojs["default"].TextBlock, {
+    alignment: _gojs["default"].Spot.Right,
+    font: "Bold 12pt Sans-Serif"
+  }, new _gojs["default"].Binding("text"))), //three named ports, one on each side except the top, all output only:
+  _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.Top, false, true), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
+}
+
+module.exports = {
+  defaultGraph: defaultGraph,
+  conditionalGraph: conditionalGraph,
+  startGraph: startGraph,
+  varGraph: varGraph,
+  ifGraph: ifGraph,
+  caseGraph: caseGraph,
+  switchGraph: switchGraph,
+  forGraph: forGraph,
+  endGraph: endGraph,
+  commentGraph: commentGraph,
+  groupGraph: groupGraph
+};
+
+/***/ }),
+
 /***/ "./pages/start.js":
 /*!************************!*\
   !*** ./pages/start.js ***!
@@ -12606,13 +12774,13 @@ function (_Component) {
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5CElectronNext_project%5CViews%5Cpages%5Cstart.js ***!
-  \*********************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5Cteoria%5CViews%5Cpages%5Cstart.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5CElectronNext_project%5CViews%5Cpages%5Cstart.js! */"../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5CElectronNext_project%5CViews%5Cpages%5Cstart.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5Cteoria%5CViews%5Cpages%5Cstart.js! */"../node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fstart&absolutePagePath=C%3A%5CUsers%5CLENOVO%5CDocuments%5Cteoria%5CViews%5Cpages%5Cstart.js!./");
 
 
 /***/ }),

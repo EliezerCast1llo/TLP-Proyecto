@@ -37,7 +37,7 @@ function App() {
       color: #09d3ac;
   }
 
-  #blockWhite {
+  #blockWhites {
     background: #373737;
     width: 175px;
     height: 100px;
