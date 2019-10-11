@@ -223,7 +223,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const $ = gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GraphObject.make;
-var myDiagram;
+var myDiagram, myPalette;
 class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
@@ -274,12 +274,25 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     myDiagram.toolManager.linkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Link.Orthogonal;
     myDiagram.toolManager.relinkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Link.Orthogonal; // initialize the Palette that is on the left side of the page
 
-    let myPalette = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Palette, "palette", // must name or refer to the DIV HTML element
+    myPalette = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Palette, "palette");
+    /*, // must name or refer to the DIV HTML element
     {
-      nodeTemplateMap: myDiagram.nodeTemplateMap,
-      // share the templates used by myDiagram
-      model: new gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GraphLinksModel(_modelsDfd__WEBPACK_IMPORTED_MODULE_3___default.a.modelsData(), _modelsDfd__WEBPACK_IMPORTED_MODULE_3___default.a.modelsLinks())
-    });
+    nodeTemplateMap: myDiagram.nodeTemplateMap, // share the templates used by myDiagram
+    model: new go.GraphLinksModel(dataModels.modelsData(), dataModels.modelsLinks())
+    });*/
+
+    /*myPalette.nodeTemplateMap.add("Conditional", nodeTemplate.conditionalGraph());
+    myPalette.nodeTemplateMap.add("Start", nodeTemplate.startGraph());
+    myPalette.nodeTemplateMap.add("Var", nodeTemplate.varGraph());
+    myPalette.nodeTemplateMap.add("If", nodeTemplate.ifGraph());
+    myPalette.nodeTemplateMap.add("case", nodeTemplate.caseGraph());
+    myPalette.nodeTemplateMap.add("switch", nodeTemplate.switchGraph());
+    myPalette.nodeTemplateMap.add("for", nodeTemplate.forGraph());
+    myPalette.nodeTemplateMap.add("End", nodeTemplate.endGraph());
+    myPalette.nodeTemplateMap.add("Comment", nodeTemplate.commentGraph());*/
+
+    myPalette.nodeTemplate = _nodeTemplate__WEBPACK_IMPORTED_MODULE_5___default.a.defaultGraph();
+    myPalette.model = new gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GraphLinksModel(_modelsDfd__WEBPACK_IMPORTED_MODULE_3___default.a.modelsData(), _modelsDfd__WEBPACK_IMPORTED_MODULE_3___default.a.modelsLinks());
     myPalette.layout = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GridLayout, {
       wrappingColumn: 2,
       wrappingWidth: 400
@@ -5517,7 +5530,7 @@ function nodeStyle() {
 
 function textStyle() {
   return {
-    font: "bold 11pt Helvetica, Arial, sans-serif",
+    font: "bold 10pt Helvetica, Arial, sans-serif",
     margin: 2,
     stroke: "whitesmoke"
   };
@@ -5546,31 +5559,48 @@ function modelsData() {
     category: "Start",
     text: "Start",
     color: '#DC3C00',
-    loc: "50 30"
+    fig: "Circle"
   }, {
     category: "Var",
     text: "INT",
-    color: 'blue'
+    color: 'blue',
+    fig: "square",
+    height: "100"
   }, {
     category: "Var",
     text: "CHAR",
-    color: 'green'
+    color: 'green',
+    fig: "square",
+    height: "100"
   }, {
     category: "Var",
     text: "FLOAT",
-    color: 'yellow'
+    color: 'yellow',
+    fig: "square",
+    height: "100"
   }, {
     category: "Var",
     text: "STRING",
-    color: 'red'
+    color: 'red',
+    fig: "square",
+    height: "100"
   }, {
     category: "Var",
     text: "VECTOR",
-    color: 'gray'
+    color: 'gray',
+    fig: "square",
+    height: "100"
   }, {
     category: "If",
     text: "IF",
-    color: 'gray'
+    color: 'gray',
+    fig: "RightTriangle"
+  }, {
+    key: 'sw',
+    category: "switch",
+    text: "SWITCH",
+    color: 'gray',
+    fig: "octagon"
   },
   /*{
       key: 'en',
@@ -5601,18 +5631,26 @@ function modelsData() {
   {
     category: "for",
     color: 'red',
-    text: "For"
+    text: "For",
+    cond: "condicion",
+    var: "variable",
+    act: "accion",
+    fig: "start"
   }, {
-    text: "Instrucción"
+    text: "Instrucción",
+    fig: "Rectangle"
   }, {
     category: "Conditional",
-    text: "If-Else"
+    text: "If-Else",
+    fig: "Diamond"
   }, {
     category: "End",
-    text: "End"
+    text: "End",
+    fig: "Circle"
   }, {
     category: "Comment",
-    text: "Comment"
+    text: "Comment",
+    fig: "File"
   }];
 }
 
@@ -5653,20 +5691,26 @@ const $ = _gojs.default.GraphObject.make; // the default category
 
 function defaultGraph() {
   return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
-  $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Rectangle", new _gojs.default.Binding("fill", "color"), {
+  $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Rectangle", new _gojs.default.Binding("fill", "color"), new _gojs.default.Binding("figure", "fig"), {
     fill: "#00A9C9",
     strokeWidth: 0,
     portId: "",
     fromLinkable: true,
+    minSize: new _gojs.default.Size(60, 60),
+    maxSize: new _gojs.default.Size(100, 100),
     toLinkable: true
   }), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
-    margin: 5,
-    editable: true
+    editable: true,
+    textAlign: "center"
   }, new _gojs.default.Binding("text").makeTwoWay())), // four named ports, one on each side:
   _functionsDfd.default.makePort("T", _gojs.default.Spot.Top, _gojs.default.Spot.TopSide, false, true), _functionsDfd.default.makePort("L", _gojs.default.Spot.Left, _gojs.default.Spot.LeftSide, true, true), _functionsDfd.default.makePort("R", _gojs.default.Spot.Right, _gojs.default.Spot.RightSide, true, true), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.BottomSide, true, false));
 }
 
 function conditionalGraph() {
+  /* myDiagram.model.addNodeData({
+       text: "Instrucción",
+       fig: "Rectangle"
+   });*/
   return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), {
     locationSpot: _gojs.default.Spot.Center
   }, // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
@@ -5702,7 +5746,7 @@ function varGraph() {
     toLinkable: true
   }), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
     editable: true
-  }, new _gojs.default.Binding("text"))), // three named ports, one on each side except the top, all output only:
+  }, new _gojs.default.Binding("text").makeTwoWay())), // three named ports, one on each side except the top, all output only:
   _functionsDfd.default.makePort("T", _gojs.default.Spot.Top, _gojs.default.Spot.TopSide, false, true), _functionsDfd.default.makePort("L", _gojs.default.Spot.Left, _gojs.default.Spot.LeftSide, true, true), _functionsDfd.default.makePort("R", _gojs.default.Spot.Right, _gojs.default.Spot.RightSide, true, true), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.BottomSide, true, false));
 }
 
@@ -5744,32 +5788,38 @@ function switchGraph() {
 }
 
 function forGraph() {
-  return $(_gojs.default.Node, "Spot", {
-    locationSpot: _gojs.default.Spot.Center
-  }, $(_gojs.default.Shape, "start", {
-    fill: "white",
-    strokeWidth: 1
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), $(_gojs.default.Shape, "start", {
+    fill: "red",
+    minSize: new _gojs.default.Size(80, 30),
+    maxSize: new _gojs.default.Size(190, 70),
+    strokeWidth: 0
+  }), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
+    text: "variable:",
+    stroke: "black",
+    alignment: new _gojs.default.Spot(0.25, 0.2)
   }), $(_gojs.default.TextBlock, {
-    text: "variable",
-    stroke: "blue",
-    alignment: new _gojs.default.Spot(0.5, 0.2)
-  }), $(_gojs.default.TextBlock, {
-    text: "variable",
-    stroke: "blue",
-    alignment: new _gojs.default.Spot(0.10, 0.2)
+    stroke: "black",
+    editable: true,
+    alignment: new _gojs.default.Spot(0.6, 0.2)
+  }, new _gojs.default.Binding("text", "var").makeTwoWay()), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
+    text: "Condicion:",
+    stroke: "black",
+    alignment: new _gojs.default.Spot(0.25, 0.5)
   }), $(_gojs.default.TextBlock, {
     text: "Condicion",
-    stroke: "red",
-    alignment: new _gojs.default.Spot(0.5, 0.4)
-  }), $(_gojs.default.TextBlock, {
-    text: "variable",
-    stroke: "blue",
-    alignment: new _gojs.default.Spot(0.10, 0.4)
+    stroke: "black",
+    editable: true,
+    alignment: new _gojs.default.Spot(0.6, 0.5)
+  }, new _gojs.default.Binding("text", "cond").makeTwoWay()), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
+    text: "Accion:",
+    stroke: "black",
+    alignment: new _gojs.default.Spot(0.25, 0.8)
   }), $(_gojs.default.TextBlock, {
     text: "Accion",
-    stroke: "red",
-    alignment: new _gojs.default.Spot(0.5, 0.6)
-  }), _functionsDfd.default.makePort("T", _gojs.default.Spot.Top, _gojs.default.Spot.Top, false, true), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.Bottom, true, false));
+    stroke: "black",
+    editable: true,
+    alignment: new _gojs.default.Spot(0.6, 0.8)
+  }, new _gojs.default.Binding("text", "act").makeTwoWay()), _functionsDfd.default.makePort("T", _gojs.default.Spot.Top, _gojs.default.Spot.Top, false, true), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.Bottom, true, false));
 }
 
 function endGraph() {

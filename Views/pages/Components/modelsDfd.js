@@ -4,37 +4,54 @@ function modelsData() {
             category: "Start",
             text: "Start",
             color: '#DC3C00',
-            loc:"50 30"
+            fig: "Circle"
         },
         {
             category: "Var",
             text: "INT",
-            color: 'blue'
+            color: 'blue',
+            fig: "square",
+            height: "100"
         },
         {
             category: "Var",
             text: "CHAR",
-            color: 'green'
+            color: 'green',
+            fig: "square",
+            height: "100"
         },
         {
             category: "Var",
             text: "FLOAT",
-            color: 'yellow'
+            color: 'yellow',
+            fig: "square",
+            height: "100"
         },
         {
             category: "Var",
             text: "STRING",
-            color: 'red'
+            color: 'red',
+            fig: "square",
+            height: "100"
         },
         {
             category: "Var",
             text: "VECTOR",
-            color: 'gray'
+            color: 'gray',
+            fig: "square",
+            height: "100"
         },
         {
             category: "If",
             text: "IF",
-            color: 'gray'
+            color: 'gray',
+            fig: "RightTriangle"
+        }, {
+            key: 'sw',
+            category: "switch",
+            text: "SWITCH",
+            color: 'gray',
+            fig: "octagon"
         },
         /*{
             key: 'en',
@@ -65,19 +82,27 @@ function modelsData() {
         {
             category: "for",
             color: 'red',
-            text: "For"
+            text: "For",
+            cond: "condicion",
+            var: "variable",
+            act: "accion",
+            fig: "start"
         },
         {
-            text: "Instrucción"
+            text: "Instrucción",
+            fig: "Rectangle"
         }, {
             category: "Conditional",
-            text: "If-Else"
+            text: "If-Else",
+            fig: "Diamond"
         }, {
             category: "End",
-            text: "End"
+            text: "End",
+            fig: "Circle"
         }, {
             category: "Comment",
-            text: "Comment"
+            text: "Comment",
+            fig: "File"
         }
     ]
 }

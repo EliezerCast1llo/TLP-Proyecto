@@ -8,18 +8,22 @@ function defaultGraph() {
     return $(go.Node, "Spot", functionDfd.nodeStyle(),
         // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
         $(go.Panel, "Auto",
-            $(go.Shape, "Rectangle", new go.Binding("fill", "color"),
+            $(go.Shape, "Rectangle",
+                new go.Binding("fill", "color"),
+                new go.Binding("figure", "fig"),
                 {
                     fill: "#00A9C9",
                     strokeWidth: 0,
                     portId: "",
                     fromLinkable: true,
+                    minSize: new go.Size(60, 60),
+                    maxSize: new go.Size(100, 100),
                     toLinkable: true
                 },
             ),
             $(go.TextBlock, functionDfd.textStyle(), {
-                margin: 5,
-                editable: true
+                editable: true,
+                textAlign: "center",
             }, new go.Binding("text").makeTwoWay())
         ),
         // four named ports, one on each side:
@@ -31,6 +35,10 @@ function defaultGraph() {
 }
 
 function conditionalGraph() {
+    /* myDiagram.model.addNodeData({
+         text: "Instrucción",
+         fig: "Rectangle"
+     });*/
     return $(go.Node, "Spot", functionDfd.nodeStyle(), { locationSpot: go.Spot.Center },
         // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
         $(go.Panel, "Auto",
@@ -48,6 +56,7 @@ function conditionalGraph() {
             },
                 new go.Binding("text").makeTwoWay())
         ),
+     
         // four named ports, one on each side:
         functionDfd.makePort("T", go.Spot.Top, go.Spot.Top, false, true),
         functionDfd.makePort("L", go.Spot.Left, go.Spot.Left, true, true),
@@ -88,7 +97,7 @@ function varGraph() {
                 toLinkable: true
             }),
             $(go.TextBlock, functionDfd.textStyle(), { editable: true },
-                new go.Binding("text"))
+                new go.Binding("text").makeTwoWay())
         ),
         // three named ports, one on each side except the top, all output only:
         functionDfd.makePort("T", go.Spot.Top, go.Spot.TopSide, false, true),
@@ -160,17 +169,54 @@ function switchGraph() {
 }
 
 function forGraph() {
-    return $(go.Node, "Spot", { locationSpot: go.Spot.Center },
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Shape, "start",
             {
-                fill: "white",
-                strokeWidth: 1
+                fill: "red",
+                minSize: new go.Size(80, 30),
+                maxSize: new go.Size(190, 70),
+                strokeWidth: 0
             }),
-        $(go.TextBlock, { text: "variable", stroke: "blue", alignment: new go.Spot(0.5, 0.2) }),
-        $(go.TextBlock, { text: "variable", stroke: "blue", alignment: new go.Spot(0.10, 0.2) }),
-        $(go.TextBlock, { text: "Condicion", stroke: "red", alignment: new go.Spot(0.5, 0.4) }),
-        $(go.TextBlock, { text: "variable", stroke: "blue", alignment: new go.Spot(0.10, 0.4) }),
-        $(go.TextBlock, { text: "Accion", stroke: "red", alignment: new go.Spot(0.5, 0.6) }),
+        $(go.TextBlock, functionDfd.textStyle(),
+            {
+                text: "variable:", stroke: "black",
+                alignment: new go.Spot(0.25, 0.2)
+            }
+        ),
+        $(go.TextBlock,
+            {
+                stroke: "black",
+                editable: true,
+                alignment: new go.Spot(0.6, 0.2)
+            },
+            new go.Binding("text", "var").makeTwoWay()
+        ),
+        $(go.TextBlock, functionDfd.textStyle(),
+            {
+                text: "Condicion:",
+                stroke: "black",
+                alignment: new go.Spot(0.25, 0.5)
+            }
+        ),
+        $(go.TextBlock,
+            {
+                text: "Condicion",
+                stroke: "black",
+                editable: true,
+                alignment: new go.Spot(0.6, 0.5)
+            },
+            new go.Binding("text", "cond").makeTwoWay()
+        ),
+        $(go.TextBlock, functionDfd.textStyle(), { text: "Accion:", stroke: "black", alignment: new go.Spot(0.25, 0.8) }),
+        $(go.TextBlock,
+            {
+                text: "Accion",
+                stroke: "black",
+                editable: true,
+                alignment: new go.Spot(0.6, 0.8)
+            },
+            new go.Binding("text", "act").makeTwoWay()
+        ),
 
         functionDfd.makePort("T", go.Spot.Top, go.Spot.Top, false, true),
         functionDfd.makePort("B", go.Spot.Bottom, go.Spot.Bottom, true, false)

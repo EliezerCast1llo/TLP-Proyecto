@@ -111,7 +111,7 @@ function nodeStyle() {
 
 function textStyle() {
     return {
-        font: "bold 11pt Helvetica, Arial, sans-serif",
+        font: "bold 10pt Helvetica, Arial, sans-serif",
         margin: 2,
         stroke: "whitesmoke"
     }

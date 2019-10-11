@@ -7,7 +7,7 @@ import functionDfd from './functionsDfd'
 import nodeTemplate from './nodeTemplate'
 
 const $ = go.GraphObject.make;
-var myDiagram;
+var myDiagram, myPalette;
 export default class GoJs extends Component {
   constructor(props) {
     super(props);
@@ -54,13 +54,24 @@ export default class GoJs extends Component {
 
     // initialize the Palette that is on the left side of the page
 
-    let myPalette = $(go.Palette, "palette", // must name or refer to the DIV HTML element
+    myPalette = $(go.Palette, "palette")/*, // must name or refer to the DIV HTML element
       {
 
         nodeTemplateMap: myDiagram.nodeTemplateMap, // share the templates used by myDiagram
         model: new go.GraphLinksModel(dataModels.modelsData(), dataModels.modelsLinks())
-      });
+      });*/
 
+    /*myPalette.nodeTemplateMap.add("Conditional", nodeTemplate.conditionalGraph());
+    myPalette.nodeTemplateMap.add("Start", nodeTemplate.startGraph());
+    myPalette.nodeTemplateMap.add("Var", nodeTemplate.varGraph());
+    myPalette.nodeTemplateMap.add("If", nodeTemplate.ifGraph());
+    myPalette.nodeTemplateMap.add("case", nodeTemplate.caseGraph());
+    myPalette.nodeTemplateMap.add("switch", nodeTemplate.switchGraph());
+    myPalette.nodeTemplateMap.add("for", nodeTemplate.forGraph());
+    myPalette.nodeTemplateMap.add("End", nodeTemplate.endGraph());
+    myPalette.nodeTemplateMap.add("Comment", nodeTemplate.commentGraph());*/
+    myPalette.nodeTemplate = nodeTemplate.defaultGraph();
+    myPalette.model = new go.GraphLinksModel(dataModels.modelsData(), dataModels.modelsLinks());
     myPalette.layout = $(go.GridLayout,
       {
         wrappingColumn: 2,
