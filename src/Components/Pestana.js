@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Pestana extends Component{
-    render(){
     return(
             <nav>
                 
@@ -17,7 +16,6 @@ class Pestana extends Component{
 
             </nav>
         );
-    }
 
 }
 
