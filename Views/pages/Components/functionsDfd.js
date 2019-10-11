@@ -8,7 +8,8 @@ function linkTemplate() {
             curve: go.Link.JumpOver,
             corner: 5,
             toShortLength: 4,
-            relinkableFrom: true, relinkableTo: true,
+            relinkableFrom: true,
+             relinkableTo: true,
             reshapable: true,
             resegmentable: true,
             selectionAdorned: false
@@ -19,25 +20,22 @@ function linkTemplate() {
                 isPanelMain: true,
                 strokeWidth: 8,
                 stroke: "transparent",
-
                 name: "HIGHLIGHT"
             }),
         $(go.Shape, // the link path shape
             {
                 isPanelMain: true,
-                stroke: "gray",
-
+                stroke: "white",
                 strokeWidth: 2
             },
             new go.Binding("stroke", "isSelected", function (sel) {
-                return sel ? "dodgerblue" : "gray";
+                return sel ? "dodgerblue" : "white";
             }).ofObject()),
         $(go.Shape, // the arrowhead
             {
                 toArrow: "standard",
                 strokeWidth: 0,
-
-                fill: "gray"
+                fill: "white"
             }),
         $(go.Panel, "Auto", // the link label, normally not visible
             {
@@ -119,4 +117,10 @@ function textStyle() {
     }
 }
 
-module.exports = { linkTemplate, makePort, showLinkLabel, nodeStyle, textStyle }
+module.exports = {
+    linkTemplate,
+    makePort,
+    showLinkLabel,
+    nodeStyle,
+    textStyle
+}

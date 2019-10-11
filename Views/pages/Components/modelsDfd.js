@@ -3,7 +3,8 @@ function modelsData() {
         {
             category: "Start",
             text: "Start",
-            color: '#DC3C00'
+            color: '#DC3C00',
+            loc:"50 30"
         },
         {
             category: "Var",

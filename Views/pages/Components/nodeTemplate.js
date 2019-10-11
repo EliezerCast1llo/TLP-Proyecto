@@ -5,7 +5,7 @@ const $ = go.GraphObject.make;
 
 // the default category
 function defaultGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
         // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
         $(go.Panel, "Auto",
             $(go.Shape, "Rectangle", new go.Binding("fill", "color"),
@@ -13,16 +13,14 @@ function defaultGraph() {
                     fill: "#00A9C9",
                     strokeWidth: 0,
                     portId: "",
-                    fromLinkable: true, toLinkable: true
+                    fromLinkable: true,
+                    toLinkable: true
                 },
-                new go.Binding("figure", "figure")),
+            ),
             $(go.TextBlock, functionDfd.textStyle(), {
-                margin: 8,
-                maxSize: new go.Size(160, NaN),
-                wrap: go.TextBlock.WrapFit,
+                margin: 5,
                 editable: true
-            },
-                new go.Binding("text").makeTwoWay())
+            }, new go.Binding("text").makeTwoWay())
         ),
         // four named ports, one on each side:
         functionDfd.makePort("T", go.Spot.Top, go.Spot.TopSide, false, true),
@@ -33,20 +31,19 @@ function defaultGraph() {
 }
 
 function conditionalGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(), { locationSpot: go.Spot.Center },
         // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
         $(go.Panel, "Auto",
-            $(go.Shape, "Diamond", {
-                fill: "#00A9C9",
-                strokeWidth: 0,
-                portId: "",
-                fromLinkable: true, toLinkable: true
-            },
-                new go.Binding("figure", "figure")),
+            $(go.Shape, "Diamond",
+                {
+                    fill: "#00A9C9",
+                    strokeWidth: 0,
+                    portId: "",
+                    fromLinkable: true,
+                    toLinkable: true
+                }),
             $(go.TextBlock, functionDfd.textStyle(), {
                 margin: 8,
-                maxSize: new go.Size(160, NaN),
-                wrap: go.TextBlock.WrapFit,
                 editable: true
             },
                 new go.Binding("text").makeTwoWay())
@@ -60,35 +57,35 @@ function conditionalGraph() {
 }
 
 function startGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Panel, "Auto",
             $(go.Shape, "Circle",
-                new go.Binding("fill", "color"), {
-                minSize: new go.Size(40, 40),
-                strokeWidth: 0,
-                portId: "",
-                fromLinkable: true, toLinkable: true
-            }),
+                new go.Binding("fill", "color"),
+                {
+                    minSize: new go.Size(40, 40),
+                    strokeWidth: 0,
+                    portId: "",
+                    fromLinkable: true,
+                    toLinkable: true
+                }),
             $(go.TextBlock, "Start", functionDfd.textStyle(),
                 new go.Binding("text"))
         ),
-        // three named ports, one on each side except the top, all output only:
-        /* this.makePort("L", go.Spot.Left, go.Spot.Left, true, false),
-         this.makePort("R", go.Spot.Right, go.Spot.Right, true, false),*/
         functionDfd.makePort("B", go.Spot.Bottom, go.Spot.Bottom, true, false)
     )
 }
 
 
 function varGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Panel, "Auto",
             $(go.Shape, "square",
                 new go.Binding("fill", "color"), {
                 minSize: new go.Size(40, 40),
                 strokeWidth: 0,
                 portId: "",
-                fromLinkable: true, toLinkable: true
+                fromLinkable: true,
+                toLinkable: true
             }),
             $(go.TextBlock, functionDfd.textStyle(), { editable: true },
                 new go.Binding("text"))
@@ -102,16 +99,15 @@ function varGraph() {
 }
 
 function ifGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Panel, "Auto",
             $(go.Shape, "RightTriangle",
                 new go.Binding("fill", "color"), {
-                // angle: 65,
-                // geometryString: "F M140 0 L70 70 0 50z",
                 minSize: new go.Size(80, 80),
                 strokeWidth: 0,
                 portId: "",
-                fromLinkable: true, toLinkable: true
+                fromLinkable: true,
+                toLinkable: true
             }),
             $(go.TextBlock, functionDfd.textStyle(), { editable: true },
                 new go.Binding("text"))
@@ -125,14 +121,13 @@ function ifGraph() {
 }
 
 function caseGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(), new go.Binding("location", "loc", go.Point.parse),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
+        new go.Binding("location", "loc", go.Point.parse),
         $(go.Panel, "Auto",
             $(go.Shape, "RoundedRectangle",
                 new go.Binding("fill", "color"), {
-                // angle: 65,
-                // geometryString: "F M140 0 L70 70 0 50z",
-                //minSize: new go.Size(80, 80),
-                fromSpot: go.Spot.Bottom, toSpot: go.Spot.Top,
+                fromSpot: go.Spot.Bottom,
+                toSpot: go.Spot.Top,
                 strokeWidth: 0,
                 portId: "",
                 fromLinkable: true, toLinkable: true
@@ -149,7 +144,7 @@ function caseGraph() {
 }
 
 function switchGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Panel, "Auto",
             $(go.Shape, "octagon",
                 new go.Binding("fill", "color"), {
@@ -165,31 +160,33 @@ function switchGraph() {
 }
 
 function forGraph() {
-    return $(go.Node, "Spot",
-        $(go.Shape, "Rectangle",
+    return $(go.Node, "Spot", { locationSpot: go.Spot.Center },
+        $(go.Shape, "start",
             {
-                fill: "",
-                minSize: new go.Size(140, 40),
-                strokeWidth: 0
+                fill: "white",
+                strokeWidth: 1
             }),
-        $(go.Shape, "TriangleLeft", { width: 20, height: 40, fill: "black", alignment: go.Spot.Left }),
-        $(go.Shape, "Rectangle", { width: 120, height: 40, fill: "black" }),
-        $(go.Shape, "TriangleRight", { width: 20, height: 40, fill: "black", alignment: go.Spot.Right }),
-        $(go.TextBlock, functionDfd.textStyle(), { text: "Inicio", font: "bold 8pt Helvetica, Arial, sans-serif", position: new go.Point(0, 0) }),
-        $(go.TextBlock, functionDfd.textStyle(), { editable: true, text: "3", font: "bold 8pt Helvetica, Arial, sans-serif", position: new go.Point(200, 0) }),
+        $(go.TextBlock, { text: "variable", stroke: "blue", alignment: new go.Spot(0.5, 0.2) }),
+        $(go.TextBlock, { text: "variable", stroke: "blue", alignment: new go.Spot(0.10, 0.2) }),
+        $(go.TextBlock, { text: "Condicion", stroke: "red", alignment: new go.Spot(0.5, 0.4) }),
+        $(go.TextBlock, { text: "variable", stroke: "blue", alignment: new go.Spot(0.10, 0.4) }),
+        $(go.TextBlock, { text: "Accion", stroke: "red", alignment: new go.Spot(0.5, 0.6) }),
+
+        functionDfd.makePort("T", go.Spot.Top, go.Spot.Top, false, true),
         functionDfd.makePort("B", go.Spot.Bottom, go.Spot.Bottom, true, false)
     )
 }
 
 function endGraph() {
-    return $(go.Node, "Table", functionDfd.nodeStyle(),
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Panel, "Auto",
             $(go.Shape, "Circle", {
                 minSize: new go.Size(40, 40),
                 fill: "#DC3C00",
                 strokeWidth: 0,
                 portId: "",
-                fromLinkable: true, toLinkable: true
+                fromLinkable: true,
+                toLinkable: true
             }),
             $(go.TextBlock, "End", functionDfd.textStyle(),
                 new go.Binding("text"))
@@ -207,7 +204,8 @@ function commentGraph() {
             fill: "#DEE0A3",
             strokeWidth: 0,
             portId: "",
-            fromLinkable: true, toLinkable: true
+            fromLinkable: true,
+            toLinkable: true
         }),
         $(go.TextBlock, functionDfd.textStyle(), {
             margin: 5,

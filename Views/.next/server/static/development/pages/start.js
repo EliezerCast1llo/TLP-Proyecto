@@ -236,20 +236,16 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   renderCanvas() {
     myDiagram = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Diagram, this.refs.goJsDiv, {
-      grid: $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Panel, "Grid", $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineH", {
+      grid: $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Panel, "Grid", // $(go.Shape, "LineH", { stroke: "transparent", strokeWidth: .9 }),
+      $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineH", {
         stroke: "gray",
-        strokeWidth: .9
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineH", {
-        stroke: "darkslategray",
-        strokeWidth: 1.5,
-        interval: 10
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineV", {
+        strokeWidth: 0.3,
+        interval: 2
+      }), //$(go.Shape, "LineV", { stroke: "transparent", strokeWidth: .9 }),
+      $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineV", {
         stroke: "gray",
-        strokeWidth: .9
-      }), $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineV", {
-        stroke: "darkslategray",
-        strokeWidth: 1.5,
-        interval: 10
+        strokeWidth: 0.3,
+        interval: 2
       })),
       "LinkDrawn": _functionsDfd__WEBPACK_IMPORTED_MODULE_4___default.a.showLinkLabel,
       // this DiagramEvent listener is defined below
@@ -278,16 +274,16 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     myDiagram.toolManager.linkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Link.Orthogonal;
     myDiagram.toolManager.relinkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Link.Orthogonal; // initialize the Palette that is on the left side of the page
 
-    let myPalette = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Palette, "Diamond", // must name or refer to the DIV HTML element
+    let myPalette = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Palette, "palette", // must name or refer to the DIV HTML element
     {
-      layout: $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GridLayout, {
-        alignment: gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GridLayout.Location
-      }),
       nodeTemplateMap: myDiagram.nodeTemplateMap,
       // share the templates used by myDiagram
       model: new gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GraphLinksModel(_modelsDfd__WEBPACK_IMPORTED_MODULE_3___default.a.modelsData(), _modelsDfd__WEBPACK_IMPORTED_MODULE_3___default.a.modelsLinks())
     });
-    myPalette.layout.sorting = gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GridLayout.Forward;
+    myPalette.layout = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GridLayout, {
+      wrappingColumn: 2,
+      wrappingWidth: 400
+    });
   }
 
   componentDidMount() {
@@ -318,7 +314,7 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "row"
     }, __jsx("div", {
       className: "col-md-3",
-      id: "Diamond",
+      id: "palette",
       style: {
         'backgroundColor': '#373737'
       }
@@ -5436,15 +5432,15 @@ function linkTemplate() {
   }), $(_gojs.default.Shape, // the link path shape
   {
     isPanelMain: true,
-    stroke: "gray",
+    stroke: "white",
     strokeWidth: 2
   }, new _gojs.default.Binding("stroke", "isSelected", function (sel) {
-    return sel ? "dodgerblue" : "gray";
+    return sel ? "dodgerblue" : "white";
   }).ofObject()), $(_gojs.default.Shape, // the arrowhead
   {
     toArrow: "standard",
     strokeWidth: 0,
-    fill: "gray"
+    fill: "white"
   }), $(_gojs.default.Panel, "Auto", // the link label, normally not visible
   {
     visible: false,
@@ -5549,7 +5545,8 @@ function modelsData() {
   {
     category: "Start",
     text: "Start",
-    color: '#DC3C00'
+    color: '#DC3C00',
+    loc: "50 30"
   }, {
     category: "Var",
     text: "INT",
@@ -5655,55 +5652,49 @@ var _functionsDfd = _interopRequireDefault(__webpack_require__(/*! ./functionsDf
 const $ = _gojs.default.GraphObject.make; // the default category
 
 function defaultGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
   $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Rectangle", new _gojs.default.Binding("fill", "color"), {
     fill: "#00A9C9",
     strokeWidth: 0,
     portId: "",
     fromLinkable: true,
     toLinkable: true
-  }, new _gojs.default.Binding("figure", "figure")), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
-    margin: 8,
-    maxSize: new _gojs.default.Size(160, NaN),
-    wrap: _gojs.default.TextBlock.WrapFit,
+  }), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
+    margin: 5,
     editable: true
   }, new _gojs.default.Binding("text").makeTwoWay())), // four named ports, one on each side:
   _functionsDfd.default.makePort("T", _gojs.default.Spot.Top, _gojs.default.Spot.TopSide, false, true), _functionsDfd.default.makePort("L", _gojs.default.Spot.Left, _gojs.default.Spot.LeftSide, true, true), _functionsDfd.default.makePort("R", _gojs.default.Spot.Right, _gojs.default.Spot.RightSide, true, true), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.BottomSide, true, false));
 }
 
 function conditionalGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), {
+    locationSpot: _gojs.default.Spot.Center
+  }, // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
   $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Diamond", {
     fill: "#00A9C9",
     strokeWidth: 0,
     portId: "",
     fromLinkable: true,
     toLinkable: true
-  }, new _gojs.default.Binding("figure", "figure")), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
+  }), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
     margin: 8,
-    maxSize: new _gojs.default.Size(160, NaN),
-    wrap: _gojs.default.TextBlock.WrapFit,
     editable: true
   }, new _gojs.default.Binding("text").makeTwoWay())), // four named ports, one on each side:
   _functionsDfd.default.makePort("T", _gojs.default.Spot.Top, _gojs.default.Spot.Top, false, true), _functionsDfd.default.makePort("L", _gojs.default.Spot.Left, _gojs.default.Spot.Left, true, true), _functionsDfd.default.makePort("R", _gojs.default.Spot.Right, _gojs.default.Spot.Right, true, true), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.Bottom, true, false));
 }
 
 function startGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Circle", new _gojs.default.Binding("fill", "color"), {
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Circle", new _gojs.default.Binding("fill", "color"), {
     minSize: new _gojs.default.Size(40, 40),
     strokeWidth: 0,
     portId: "",
     fromLinkable: true,
     toLinkable: true
-  }), $(_gojs.default.TextBlock, "Start", _functionsDfd.default.textStyle(), new _gojs.default.Binding("text"))), // three named ports, one on each side except the top, all output only:
-
-  /* this.makePort("L", go.Spot.Left, go.Spot.Left, true, false),
-   this.makePort("R", go.Spot.Right, go.Spot.Right, true, false),*/
-  _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.Bottom, true, false));
+  }), $(_gojs.default.TextBlock, "Start", _functionsDfd.default.textStyle(), new _gojs.default.Binding("text"))), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.Bottom, true, false));
 }
 
 function varGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "square", new _gojs.default.Binding("fill", "color"), {
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "square", new _gojs.default.Binding("fill", "color"), {
     minSize: new _gojs.default.Size(40, 40),
     strokeWidth: 0,
     portId: "",
@@ -5716,9 +5707,7 @@ function varGraph() {
 }
 
 function ifGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "RightTriangle", new _gojs.default.Binding("fill", "color"), {
-    // angle: 65,
-    // geometryString: "F M140 0 L70 70 0 50z",
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "RightTriangle", new _gojs.default.Binding("fill", "color"), {
     minSize: new _gojs.default.Size(80, 80),
     strokeWidth: 0,
     portId: "",
@@ -5731,10 +5720,7 @@ function ifGraph() {
 }
 
 function caseGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), new _gojs.default.Binding("location", "loc", _gojs.default.Point.parse), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "RoundedRectangle", new _gojs.default.Binding("fill", "color"), {
-    // angle: 65,
-    // geometryString: "F M140 0 L70 70 0 50z",
-    //minSize: new go.Size(80, 80),
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), new _gojs.default.Binding("location", "loc", _gojs.default.Point.parse), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "RoundedRectangle", new _gojs.default.Binding("fill", "color"), {
     fromSpot: _gojs.default.Spot.Bottom,
     toSpot: _gojs.default.Spot.Top,
     strokeWidth: 0,
@@ -5748,7 +5734,7 @@ function caseGraph() {
 }
 
 function switchGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "octagon", new _gojs.default.Binding("fill", "color"), {
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "octagon", new _gojs.default.Binding("fill", "color"), {
     toSpot: _gojs.default.Spot.Bottom,
     minSize: new _gojs.default.Size(80, 80),
     strokeWidth: 0
@@ -5758,38 +5744,36 @@ function switchGraph() {
 }
 
 function forGraph() {
-  return $(_gojs.default.Node, "Spot", $(_gojs.default.Shape, "Rectangle", {
-    fill: "",
-    minSize: new _gojs.default.Size(140, 40),
-    strokeWidth: 0
-  }), $(_gojs.default.Shape, "TriangleLeft", {
-    width: 20,
-    height: 40,
-    fill: "black",
-    alignment: _gojs.default.Spot.Left
-  }), $(_gojs.default.Shape, "Rectangle", {
-    width: 120,
-    height: 40,
-    fill: "black"
-  }), $(_gojs.default.Shape, "TriangleRight", {
-    width: 20,
-    height: 40,
-    fill: "black",
-    alignment: _gojs.default.Spot.Right
-  }), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
-    text: "Inicio",
-    font: "bold 8pt Helvetica, Arial, sans-serif",
-    position: new _gojs.default.Point(0, 0)
-  }), $(_gojs.default.TextBlock, _functionsDfd.default.textStyle(), {
-    editable: true,
-    text: "3",
-    font: "bold 8pt Helvetica, Arial, sans-serif",
-    position: new _gojs.default.Point(200, 0)
-  }), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.Bottom, true, false));
+  return $(_gojs.default.Node, "Spot", {
+    locationSpot: _gojs.default.Spot.Center
+  }, $(_gojs.default.Shape, "start", {
+    fill: "white",
+    strokeWidth: 1
+  }), $(_gojs.default.TextBlock, {
+    text: "variable",
+    stroke: "blue",
+    alignment: new _gojs.default.Spot(0.5, 0.2)
+  }), $(_gojs.default.TextBlock, {
+    text: "variable",
+    stroke: "blue",
+    alignment: new _gojs.default.Spot(0.10, 0.2)
+  }), $(_gojs.default.TextBlock, {
+    text: "Condicion",
+    stroke: "red",
+    alignment: new _gojs.default.Spot(0.5, 0.4)
+  }), $(_gojs.default.TextBlock, {
+    text: "variable",
+    stroke: "blue",
+    alignment: new _gojs.default.Spot(0.10, 0.4)
+  }), $(_gojs.default.TextBlock, {
+    text: "Accion",
+    stroke: "red",
+    alignment: new _gojs.default.Spot(0.5, 0.6)
+  }), _functionsDfd.default.makePort("T", _gojs.default.Spot.Top, _gojs.default.Spot.Top, false, true), _functionsDfd.default.makePort("B", _gojs.default.Spot.Bottom, _gojs.default.Spot.Bottom, true, false));
 }
 
 function endGraph() {
-  return $(_gojs.default.Node, "Table", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Circle", {
+  return $(_gojs.default.Node, "Spot", _functionsDfd.default.nodeStyle(), $(_gojs.default.Panel, "Auto", $(_gojs.default.Shape, "Circle", {
     minSize: new _gojs.default.Size(40, 40),
     fill: "#DC3C00",
     strokeWidth: 0,

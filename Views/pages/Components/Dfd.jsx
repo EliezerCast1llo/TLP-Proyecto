@@ -18,10 +18,10 @@ export default class GoJs extends Component {
   renderCanvas() {
     myDiagram = $(go.Diagram, this.refs.goJsDiv, {
       grid: $(go.Panel, "Grid",
-        $(go.Shape, "LineH", { stroke: "gray", strokeWidth: .9 }),
-        $(go.Shape, "LineH", { stroke: "darkslategray", strokeWidth: 1.5, interval: 10 }),
-        $(go.Shape, "LineV", { stroke: "gray", strokeWidth: .9 }),
-        $(go.Shape, "LineV", { stroke: "darkslategray", strokeWidth: 1.5, interval: 10 })
+        // $(go.Shape, "LineH", { stroke: "transparent", strokeWidth: .9 }),
+        $(go.Shape, "LineH", { stroke: "gray", strokeWidth: 0.3, interval: 2 }),
+        //$(go.Shape, "LineV", { stroke: "transparent", strokeWidth: .9 }),
+        $(go.Shape, "LineV", { stroke: "gray", strokeWidth: 0.3, interval: 2 })
       ),
       "LinkDrawn": functionDfd.showLinkLabel,  // this DiagramEvent listener is defined below
       "LinkRelinked": functionDfd.showLinkLabel,
@@ -42,7 +42,7 @@ export default class GoJs extends Component {
     myDiagram.nodeTemplateMap.add("for", nodeTemplate.forGraph());
     myDiagram.nodeTemplateMap.add("End", nodeTemplate.endGraph());
     myDiagram.nodeTemplateMap.add("Comment", nodeTemplate.commentGraph());
-   
+
     myDiagram.groupTemplate = nodeTemplate.groupGraph();
 
     // replace the default Link template in the linkTemplateMap
@@ -54,14 +54,18 @@ export default class GoJs extends Component {
 
     // initialize the Palette that is on the left side of the page
 
-    let myPalette = $(go.Palette, "Diamond", // must name or refer to the DIV HTML element
+    let myPalette = $(go.Palette, "palette", // must name or refer to the DIV HTML element
       {
-        layout: $(go.GridLayout, { alignment: go.GridLayout.Location }),
+
         nodeTemplateMap: myDiagram.nodeTemplateMap, // share the templates used by myDiagram
         model: new go.GraphLinksModel(dataModels.modelsData(), dataModels.modelsLinks())
       });
 
-    myPalette.layout.sorting = go.GridLayout.Forward;
+    myPalette.layout = $(go.GridLayout,
+      {
+        wrappingColumn: 2,
+        wrappingWidth: 400
+      });
 
   }
 
@@ -86,12 +90,12 @@ export default class GoJs extends Component {
   onClickChange() {
     console.log(myDiagram.model.toJson());
   }
-  
+
   render() {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-md-3' id='Diamond' style={{ 'backgroundColor': '#373737' }}></div>
+          <div className='col-md-3' id='palette' style={{ 'backgroundColor': '#373737' }}></div>
           <div className='col-md-9 row'>
             <div id='blockWhite' ></div>
             <div ref="goJsDiv" id='goJsDiv' className='col-md-12' style={{ 'width': '500px', 'height': '700px', 'backgroundColor': '#373737' }}>
