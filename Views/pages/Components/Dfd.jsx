@@ -17,12 +17,12 @@ export default class GoJs extends Component {
 
   renderCanvas() {
     myDiagram = $(go.Diagram, this.refs.goJsDiv, {
-      grid: $(go.Panel, "Grid",
+     /* grid: $(go.Panel, "Grid",
         // $(go.Shape, "LineH", { stroke: "transparent", strokeWidth: .9 }),
         $(go.Shape, "LineH", { stroke: "gray", strokeWidth: 0.3, interval: 2 }),
         //$(go.Shape, "LineV", { stroke: "transparent", strokeWidth: .9 }),
         $(go.Shape, "LineV", { stroke: "gray", strokeWidth: 0.3, interval: 2 })
-      ),
+      ),*/
       "LinkDrawn": functionDfd.showLinkLabel,  // this DiagramEvent listener is defined below
       "LinkRelinked": functionDfd.showLinkLabel,
       "toolManager.mouseWheelBehavior": go.ToolManager.WheelZoom,
@@ -109,10 +109,10 @@ export default class GoJs extends Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-md-3' id='palette' style={{ 'backgroundColor': '#373737' }}></div>
+          <div className='col-md-3' id='palette' style={{ 'backgroundColor': '#ECF6FF' }}></div>
           <div className='col-md-9 row'>
             <div id='blockWhite' ></div>
-            <div ref="goJsDiv" id='goJsDiv' className='col-md-12' style={{ 'width': '500px', 'height': '700px', 'backgroundColor': '#373737' }}>
+            <div ref="goJsDiv" id='goJsDiv' className='col-md-12' style={{ 'width': '500px', 'height': '700px', 'backgroundColor': '#ECF6FF' }}>
             </div>
           </div>
         </div>

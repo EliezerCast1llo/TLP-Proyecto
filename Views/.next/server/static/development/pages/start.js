@@ -186,7 +186,7 @@ function App() {
     contenido: "Contenido..."
   }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "25817452"
-  }, ".App{text-align:center;background:#0F2027;background:-webkit-linear-gradient(to right,#2C5364,#203A43,#0F2027);background:linear-gradient(to left,#2C5364,#203A43,#0F2027);}.App-logo{height:40vmin;}.App-header{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;}.App-link{color:#09d3ac;}#blockWhites{background:#373737;width:175px;height:100px;z-index:3;display:block;position:absolute;margin-left:15px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTEVOT1ZPXFxEb2N1bWVudHNcXHRlb3JpYVxcVmlld3NcXHBhZ2VzXFxBcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBYXlCLEFBR3lCLEFBT0osQUFJRyxBQVVILEFBSUcsY0FqQnJCLEFBY0EsR0FWaUIsQ0FYTSxDQXlCVCxZQUNDLE1BekI2RCxPQTBCaEUsVUFDSSxjQUNJLGtCQUNELEtBbEJPLFlBb0I1QixHQTlCcUUsNERBQ25FLEdBVXVCLDZGQUNJLG1HQUNNLDZCQUNqQixZQUNoQiIsImZpbGUiOiJDOlxcVXNlcnNcXExFTk9WT1xcRG9jdW1lbnRzXFx0ZW9yaWFcXFZpZXdzXFxwYWdlc1xcQXBwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuLy9pbXBvcnQgJy4vQXBwLmNzcyc7XHJcblxyXG5pbXBvcnQgTmF2aWdhdGlvbiBmcm9tICcuL0NvbXBvbmVudHMvTmF2aWdhdGlvbic7XHJcbmltcG9ydCBQZXN0YW5hIGZyb20gJy4vQ29tcG9uZW50cy9QZXN0YW5hJztcclxuXHJcblxyXG5mdW5jdGlvbiBBcHAoKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPVwiQXBwXCI+XHJcbiAgICAgIDxOYXZpZ2F0aW9uIG1haW5uYW1lPVwiQXJjaGl2b1wiIHRpdHVsbz1cIk51ZXZvXCIgdGl0dWxvMj1cIkd1YXJkYXJcIiB0aXR1bG8zPVwiQ2VycmFyXCIgLz5cclxuICAgICAgPFBlc3RhbmEgbl9maWxlPVwiYXJjaGl2by5hbGdvXCIgY29udGVuaWRvPVwiQ29udGVuaWRvLi4uXCIgLz5cclxuXHJcbiAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXHJcbiAgICAuQXBwIHtcclxuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgICBiYWNrZ3JvdW5kOiAjMEYyMDI3O1xyXG4gICAgICBiYWNrZ3JvdW5kOiAtd2Via2l0LWxpbmVhci1ncmFkaWVudCh0byByaWdodCwgIzJDNTM2NCwgIzIwM0E0MywgIzBGMjAyNyk7XHJcbiAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byBsZWZ0LCAjMkM1MzY0LCAjMjAzQTQzLCAjMEYyMDI3KTtcclxuICB9XHJcbiAgXHJcbiAgLkFwcC1sb2dvIHtcclxuICAgICAgaGVpZ2h0OiA0MHZtaW47XHJcbiAgfVxyXG4gIFxyXG4gIC5BcHAtaGVhZGVyIHtcclxuICAgICAgbWluLWhlaWdodDogMTAwdmg7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgICBmb250LXNpemU6IGNhbGMoMTBweCArIDJ2bWluKTtcclxuICAgICAgY29sb3I6IHdoaXRlO1xyXG4gIH1cclxuICBcclxuICAuQXBwLWxpbmsge1xyXG4gICAgICBjb2xvcjogIzA5ZDNhYztcclxuICB9XHJcblxyXG4gICNibG9ja1doaXRlcyB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMzczNzM3O1xyXG4gICAgd2lkdGg6IDE3NXB4O1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHotaW5kZXg6IDM7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIG1hcmdpbi1sZWZ0OiAxNXB4O1xyXG5cclxufVxyXG4gICAgYH08L3N0eWxlPlxyXG4gICAgPC9kaXY+XHJcbiAgKTtcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgQXBwO1xyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\LENOVO\\Documents\\teoria\\Views\\pages\\App.js */"));
+  }, ".App{text-align:center;background:#0F2027;background:-webkit-linear-gradient(to right,#2C5364,#203A43,#0F2027);background:linear-gradient(to left,#2C5364,#203A43,#0F2027);}.App-logo{height:40vmin;}.App-header{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:calc(10px + 2vmin);color:white;}.App-link{color:#09d3ac;}#blockWhites{background:#373737;width:175px;height:100px;z-index:3;display:block;position:absolute;margin-left:15px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xca2FzdXlhXFxEb2N1bWVudHNcXEdpdEh1YlxcVExQLVByb3llY3RvXFxWaWV3c1xccGFnZXNcXEFwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFheUIsQUFHeUIsQUFPSixBQUlHLEFBVUgsQUFJRyxjQWpCckIsQUFjQSxHQVZpQixDQVhNLENBeUJULFlBQ0MsTUF6QjZELE9BMEJoRSxVQUNJLGNBQ0ksa0JBQ0QsS0FsQk8sWUFvQjVCLEdBOUJxRSw0REFDbkUsR0FVdUIsNkZBQ0ksbUdBQ00sNkJBQ2pCLFlBQ2hCIiwiZmlsZSI6IkM6XFxVc2Vyc1xca2FzdXlhXFxEb2N1bWVudHNcXEdpdEh1YlxcVExQLVByb3llY3RvXFxWaWV3c1xccGFnZXNcXEFwcC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcbi8vaW1wb3J0ICcuL0FwcC5jc3MnO1xyXG5cclxuaW1wb3J0IE5hdmlnYXRpb24gZnJvbSAnLi9Db21wb25lbnRzL05hdmlnYXRpb24nO1xyXG5pbXBvcnQgUGVzdGFuYSBmcm9tICcuL0NvbXBvbmVudHMvUGVzdGFuYSc7XHJcblxyXG5cclxuZnVuY3Rpb24gQXBwKCkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8ZGl2IGNsYXNzTmFtZT1cIkFwcFwiPlxyXG4gICAgICA8TmF2aWdhdGlvbiBtYWlubmFtZT1cIkFyY2hpdm9cIiB0aXR1bG89XCJOdWV2b1wiIHRpdHVsbzI9XCJHdWFyZGFyXCIgdGl0dWxvMz1cIkNlcnJhclwiIC8+XHJcbiAgICAgIDxQZXN0YW5hIG5fZmlsZT1cImFyY2hpdm8uYWxnb1wiIGNvbnRlbmlkbz1cIkNvbnRlbmlkby4uLlwiIC8+XHJcblxyXG4gICAgICA8c3R5bGUganN4IGdsb2JhbD57YFxyXG4gICAgLkFwcCB7XHJcbiAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgICAgYmFja2dyb3VuZDogIzBGMjAyNztcclxuICAgICAgYmFja2dyb3VuZDogLXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMyQzUzNjQsICMyMDNBNDMsICMwRjIwMjcpO1xyXG4gICAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gbGVmdCwgIzJDNTM2NCwgIzIwM0E0MywgIzBGMjAyNyk7XHJcbiAgfVxyXG4gIFxyXG4gIC5BcHAtbG9nbyB7XHJcbiAgICAgIGhlaWdodDogNDB2bWluO1xyXG4gIH1cclxuICBcclxuICAuQXBwLWhlYWRlciB7XHJcbiAgICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgICAgZm9udC1zaXplOiBjYWxjKDEwcHggKyAydm1pbik7XHJcbiAgICAgIGNvbG9yOiB3aGl0ZTtcclxuICB9XHJcbiAgXHJcbiAgLkFwcC1saW5rIHtcclxuICAgICAgY29sb3I6ICMwOWQzYWM7XHJcbiAgfVxyXG5cclxuICAjYmxvY2tXaGl0ZXMge1xyXG4gICAgYmFja2dyb3VuZDogIzM3MzczNztcclxuICAgIHdpZHRoOiAxNzVweDtcclxuICAgIGhlaWdodDogMTAwcHg7XHJcbiAgICB6LWluZGV4OiAzO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBtYXJnaW4tbGVmdDogMTVweDtcclxuXHJcbn1cclxuICAgIGB9PC9zdHlsZT5cclxuICAgIDwvZGl2PlxyXG4gICk7XHJcbn1cclxuXHJcbmV4cG9ydCBkZWZhdWx0IEFwcDtcclxuIl19 */\n/*@ sourceURL=C:\\Users\\kasuya\\Documents\\GitHub\\TLP-Proyecto\\Views\\pages\\App.js */"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -236,17 +236,12 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   renderCanvas() {
     myDiagram = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Diagram, this.refs.goJsDiv, {
-      grid: $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Panel, "Grid", // $(go.Shape, "LineH", { stroke: "transparent", strokeWidth: .9 }),
-      $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineH", {
-        stroke: "gray",
-        strokeWidth: 0.3,
-        interval: 2
-      }), //$(go.Shape, "LineV", { stroke: "transparent", strokeWidth: .9 }),
-      $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.Shape, "LineV", {
-        stroke: "gray",
-        strokeWidth: 0.3,
-        interval: 2
-      })),
+      /* grid: $(go.Panel, "Grid",
+         // $(go.Shape, "LineH", { stroke: "transparent", strokeWidth: .9 }),
+         $(go.Shape, "LineH", { stroke: "gray", strokeWidth: 0.3, interval: 2 }),
+         //$(go.Shape, "LineV", { stroke: "transparent", strokeWidth: .9 }),
+         $(go.Shape, "LineV", { stroke: "gray", strokeWidth: 0.3, interval: 2 })
+       ),*/
       "LinkDrawn": _functionsDfd__WEBPACK_IMPORTED_MODULE_4___default.a.showLinkLabel,
       // this DiagramEvent listener is defined below
       "LinkRelinked": _functionsDfd__WEBPACK_IMPORTED_MODULE_4___default.a.showLinkLabel,
@@ -333,7 +328,7 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "col-md-3",
       id: "palette",
       style: {
-        'backgroundColor': '#373737'
+        'backgroundColor': '#ECF6FF'
       }
     }), __jsx("div", {
       className: "col-md-9 row"
@@ -346,7 +341,7 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       style: {
         'width': '500px',
         'height': '700px',
-        'backgroundColor': '#373737'
+        'backgroundColor': '#ECF6FF'
       }
     }))), __jsx("div", {
       className: "row"
@@ -5980,7 +5975,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\LENOVO\Documents\teoria\Views\pages\start.js */"./pages/start.js");
+module.exports = __webpack_require__(/*! C:\Users\kasuya\Documents\GitHub\TLP-Proyecto\Views\pages\start.js */"./pages/start.js");
 
 
 /***/ }),
