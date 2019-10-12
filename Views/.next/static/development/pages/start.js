@@ -6983,7 +6983,9 @@ function (_Component) {
         "draggingTool.isGridSnapEnabled": true,
         "undoManager.isEnabled": true // enable undo & redo
 
-      }); // define the Node templates for regular nodes
+      }); // replace the default Link template in the linkTemplateMap
+
+      myDiagram.linkTemplate = _functionsDfd__WEBPACK_IMPORTED_MODULE_10___default.a.linkTemplate(); // define the Node templates for regular nodes
 
       myDiagram.nodeTemplateMap.add("", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.defaultGraph()); // the default category
 
@@ -6996,29 +6998,12 @@ function (_Component) {
       myDiagram.nodeTemplateMap.add("for", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.forGraph());
       myDiagram.nodeTemplateMap.add("End", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.endGraph());
       myDiagram.nodeTemplateMap.add("Comment", _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.commentGraph());
-      myDiagram.groupTemplate = _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.groupGraph(); // replace the default Link template in the linkTemplateMap
-
-      myDiagram.linkTemplate = _functionsDfd__WEBPACK_IMPORTED_MODULE_10___default.a.linkTemplate(); // temporary links used by LinkingTool and RelinkingTool are also orthogonal:
+      myDiagram.groupTemplate = _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.groupGraph(); // temporary links used by LinkingTool and RelinkingTool are also orthogonal:
 
       myDiagram.toolManager.linkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Link.Orthogonal;
       myDiagram.toolManager.relinkingTool.temporaryLink.routing = gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Link.Orthogonal; // initialize the Palette that is on the left side of the page
 
-      myPalette = $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Palette, "palette");
-      /*, // must name or refer to the DIV HTML element
-      {
-      nodeTemplateMap: myDiagram.nodeTemplateMap, // share the templates used by myDiagram
-      model: new go.GraphLinksModel(dataModels.modelsData(), dataModels.modelsLinks())
-      });*/
-
-      /*myPalette.nodeTemplateMap.add("Conditional", nodeTemplate.conditionalGraph());
-      myPalette.nodeTemplateMap.add("Start", nodeTemplate.startGraph());
-      myPalette.nodeTemplateMap.add("Var", nodeTemplate.varGraph());
-      myPalette.nodeTemplateMap.add("If", nodeTemplate.ifGraph());
-      myPalette.nodeTemplateMap.add("case", nodeTemplate.caseGraph());
-      myPalette.nodeTemplateMap.add("switch", nodeTemplate.switchGraph());
-      myPalette.nodeTemplateMap.add("for", nodeTemplate.forGraph());
-      myPalette.nodeTemplateMap.add("End", nodeTemplate.endGraph());
-      myPalette.nodeTemplateMap.add("Comment", nodeTemplate.commentGraph());*/
+      myPalette = $(gojs__WEBPACK_IMPORTED_MODULE_7___default.a.Palette, "palette"); // must name or refer to the DIV HTML element
 
       myPalette.nodeTemplate = _nodeTemplate__WEBPACK_IMPORTED_MODULE_11___default.a.defaultGraph();
       myPalette.model = new gojs__WEBPACK_IMPORTED_MODULE_7___default.a.GraphLinksModel(_modelsDfd__WEBPACK_IMPORTED_MODULE_9___default.a.modelsData(), _modelsDfd__WEBPACK_IMPORTED_MODULE_9___default.a.modelsLinks());
@@ -7034,14 +7019,13 @@ function (_Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      //console.log('componentDidMount')
       this.renderCanvas();
     }
   }, {
     key: "componentWillUpdate",
     value: function componentWillUpdate(prevProps) {
       /*console.log(JSON.stringify(prevProps, null, 2))
-      if (this.props.data !== prevProps.data) {
+      if (this.props.data !== prevProps.data) { 
        console.log('Updating 2');
        const model = this.state.myModel;
        const diagram = this.state.myDiagram;
@@ -12253,7 +12237,7 @@ function linkTemplate() {
     fill: "white"
   }), $(_gojs["default"].Panel, "Auto", // the link label, normally not visible
   {
-    visible: false,
+    visible: true,
     name: "LABEL",
     segmentIndex: 2,
     segmentFraction: 0.5
@@ -12311,7 +12295,7 @@ function makePort(name, align, spot, output, input) {
 
 function showLinkLabel(e) {
   var label = e.subject.findObject("LABEL");
-  if (label !== null) label.visible = e.subject.fromNode.data.category === "Conditional";
+  if (label !== null) label.visible = !(e.subject.fromNode.data.category != "Conditional");
 }
 
 function nodeStyle() {
@@ -12508,8 +12492,23 @@ function conditionalGraph() {
        text: "Instrucción",
        fig: "Rectangle"
    });*/
+  var defaultAdornment = $(_gojs["default"].Adornment, "Spot", $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, {
+    fill: null,
+    stroke: "dodgerblue",
+    strokeWidth: 4
+  }), $(_gojs["default"].Placeholder)), // the button to create a "next" node, at the top-right corner
+  $("Button", {
+    alignment: _gojs["default"].Spot.TopRight,
+    click: addNodeAndLink
+  }, // this function is defined below
+  new _gojs["default"].Binding("visible", "", function (a) {
+    return !a.diagram.isReadOnly;
+  }).ofObject(), $(_gojs["default"].Shape, "PlusLine", {
+    desiredSize: new _gojs["default"].Size(6, 6)
+  })));
   return $(_gojs["default"].Node, "Spot", _functionsDfd["default"].nodeStyle(), {
-    locationSpot: _gojs["default"].Spot.Center
+    locationSpot: _gojs["default"].Spot.Center,
+    selectionAdornmentTemplate: defaultAdornment
   }, // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
   $(_gojs["default"].Panel, "Auto", $(_gojs["default"].Shape, "Diamond", {
     fill: "#00A9C9",
@@ -12667,6 +12666,38 @@ function groupGraph() {
   _functionsDfd["default"].makePort("T", _gojs["default"].Spot.Top, _gojs["default"].Spot.Top, false, true), _functionsDfd["default"].makePort("B", _gojs["default"].Spot.Bottom, _gojs["default"].Spot.Bottom, true, false));
 }
 
+function addNodeAndLink(e, obj) {
+  var adorn = obj.part;
+  if (adorn === null) return;
+  e.handled = true;
+  var diagram = adorn.diagram;
+  diagram.startTransaction("Add State"); // get the node data for which the user clicked the button
+
+  var fromNode = adorn.adornedPart;
+  var fromData = fromNode.data; // create a new "State" data object, positioned off to the right of the adorned Node
+
+  var toData = {
+    text: "instruccion"
+  };
+  var p = fromNode.location;
+  console.log(p);
+  toData.loc = p.x + " " + p.y - 195; // the "loc" property is a string, not a Point object
+  // add the new node data to the model
+
+  var model = diagram.model;
+  model.addNodeData(toData); // create a link data from the old node data to the new node data
+
+  var linkdata = {};
+  linkdata[model.linkFromKeyProperty] = model.getKeyForNodeData(fromData);
+  linkdata[model.linkToKeyProperty] = model.getKeyForNodeData(toData); // and add the link data to the model
+
+  model.addLinkData(linkdata); // select the new Node
+
+  var newnode = diagram.findNodeForData(toData);
+  diagram.select(newnode);
+  diagram.commitTransaction("Add State");
+}
+
 module.exports = {
   defaultGraph: defaultGraph,
   conditionalGraph: conditionalGraph,
@@ -12678,7 +12709,8 @@ module.exports = {
   forGraph: forGraph,
   endGraph: endGraph,
   commentGraph: commentGraph,
-  groupGraph: groupGraph
+  groupGraph: groupGraph,
+  addNodeAndLink: addNodeAndLink
 };
 
 /***/ }),

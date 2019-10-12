@@ -9,7 +9,7 @@ function linkTemplate() {
             corner: 5,
             toShortLength: 4,
             relinkableFrom: true,
-             relinkableTo: true,
+            relinkableTo: true,
             reshapable: true,
             resegmentable: true,
             selectionAdorned: false
@@ -39,7 +39,7 @@ function linkTemplate() {
             }),
         $(go.Panel, "Auto", // the link label, normally not visible
             {
-                visible: false,
+                visible: true,
                 name: "LABEL",
                 segmentIndex: 2,
                 segmentFraction: 0.5
@@ -92,8 +92,8 @@ function makePort(name, align, spot, output, input) {
 
 
 function showLinkLabel(e) {
-    var label = e.subject.findObject("LABEL");
-    if (label !== null) label.visible = (e.subject.fromNode.data.category === "Conditional");
+    let label = e.subject.findObject("LABEL");
+    if (label !== null) label.visible = !(e.subject.fromNode.data.category != "Conditional");
 }
 
 function nodeStyle() {

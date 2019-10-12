@@ -39,7 +39,22 @@ function conditionalGraph() {
          text: "Instrucción",
          fig: "Rectangle"
      });*/
-    return $(go.Node, "Spot", functionDfd.nodeStyle(), { locationSpot: go.Spot.Center },
+    let defaultAdornment =
+        $(go.Adornment, "Spot",
+            $(go.Panel, "Auto",
+                $(go.Shape, { fill: null, stroke: "dodgerblue", strokeWidth: 4 }),
+                $(go.Placeholder)),
+            // the button to create a "next" node, at the top-right corner
+            $("Button",
+                {
+                    alignment: go.Spot.TopRight,
+                    click: addNodeAndLink
+                },  // this function is defined below
+                new go.Binding("visible", "", function (a) { return !a.diagram.isReadOnly; }).ofObject(),
+                $(go.Shape, "PlusLine", { desiredSize: new go.Size(6, 6) })
+            )
+        );
+    return $(go.Node, "Spot", functionDfd.nodeStyle(), { locationSpot: go.Spot.Center, selectionAdornmentTemplate: defaultAdornment },
         // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
         $(go.Panel, "Auto",
             $(go.Shape, "Diamond",
@@ -56,7 +71,7 @@ function conditionalGraph() {
             },
                 new go.Binding("text").makeTwoWay())
         ),
-     
+
         // four named ports, one on each side:
         functionDfd.makePort("T", go.Spot.Top, go.Spot.Top, false, true),
         functionDfd.makePort("L", go.Spot.Left, go.Spot.Left, true, true),
@@ -291,6 +306,38 @@ function groupGraph() {
     )
 }
 
+function addNodeAndLink(e, obj) {
+    let adorn = obj.part;
+
+    if (adorn === null) return;
+    e.handled = true;
+    let diagram = adorn.diagram;
+
+    diagram.startTransaction("Add State");
+    // get the node data for which the user clicked the button
+    let fromNode = adorn.adornedPart;
+
+    let fromData = fromNode.data;
+    // create a new "State" data object, positioned off to the right of the adorned Node
+    let toData = { text: "instruccion" };
+    let p = fromNode.location;
+    console.log(p);
+    toData.loc = p.x + " " + p.y - 195;  // the "loc" property is a string, not a Point object
+    // add the new node data to the model
+    let model = diagram.model;
+    model.addNodeData(toData);
+    // create a link data from the old node data to the new node data
+    let linkdata = {};
+    linkdata[model.linkFromKeyProperty] = model.getKeyForNodeData(fromData);
+    linkdata[model.linkToKeyProperty] = model.getKeyForNodeData(toData);
+    // and add the link data to the model
+    model.addLinkData(linkdata);
+    // select the new Node
+    let newnode = diagram.findNodeForData(toData);
+
+    diagram.select(newnode);
+    diagram.commitTransaction("Add State");
+}
 
 module.exports = {
     defaultGraph,
@@ -303,5 +350,6 @@ module.exports = {
     forGraph,
     endGraph,
     commentGraph,
-    groupGraph
+    groupGraph,
+    addNodeAndLink
 }
