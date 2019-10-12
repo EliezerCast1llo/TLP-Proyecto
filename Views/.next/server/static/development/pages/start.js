@@ -296,6 +296,10 @@ class GoJs extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     myPalette.layout = $(gojs__WEBPACK_IMPORTED_MODULE_1___default.a.GridLayout, {
       wrappingColumn: 2,
       wrappingWidth: 400
+    }); // After the layout, output results:
+
+    myDiagram.addDiagramListener('TextEdited', function () {
+      console.info("CHANGE DIAGRAM ", myDiagram.model.toJSON());
     });
   }
 

@@ -77,7 +77,10 @@ export default class GoJs extends Component {
         wrappingColumn: 2,
         wrappingWidth: 400
       });
-
+    // After the layout, output results:
+    myDiagram.addDiagramListener('TextEdited', function () {
+      console.info("CHANGE DIAGRAM ",myDiagram.model.toJSON());
+    });
   }
 
 
