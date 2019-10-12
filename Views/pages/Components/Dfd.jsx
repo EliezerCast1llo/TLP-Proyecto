@@ -30,6 +30,8 @@ export default class GoJs extends Component {
       "undoManager.isEnabled": true  // enable undo & redo
     }
     );
+    // replace the default Link template in the linkTemplateMap
+    myDiagram.linkTemplate = functionDfd.linkTemplate();
 
     // define the Node templates for regular nodes
     myDiagram.nodeTemplateMap.add("", nodeTemplate.defaultGraph());  // the default category
@@ -45,54 +47,30 @@ export default class GoJs extends Component {
 
     myDiagram.groupTemplate = nodeTemplate.groupGraph();
 
-    // replace the default Link template in the linkTemplateMap
-    myDiagram.linkTemplate = functionDfd.linkTemplate();
-
     // temporary links used by LinkingTool and RelinkingTool are also orthogonal:
     myDiagram.toolManager.linkingTool.temporaryLink.routing = go.Link.Orthogonal;
     myDiagram.toolManager.relinkingTool.temporaryLink.routing = go.Link.Orthogonal;
 
     // initialize the Palette that is on the left side of the page
-
-    myPalette = $(go.Palette, "palette")/*, // must name or refer to the DIV HTML element
-      {
-
-        nodeTemplateMap: myDiagram.nodeTemplateMap, // share the templates used by myDiagram
-        model: new go.GraphLinksModel(dataModels.modelsData(), dataModels.modelsLinks())
-      });*/
-
-    /*myPalette.nodeTemplateMap.add("Conditional", nodeTemplate.conditionalGraph());
-    myPalette.nodeTemplateMap.add("Start", nodeTemplate.startGraph());
-    myPalette.nodeTemplateMap.add("Var", nodeTemplate.varGraph());
-    myPalette.nodeTemplateMap.add("If", nodeTemplate.ifGraph());
-    myPalette.nodeTemplateMap.add("case", nodeTemplate.caseGraph());
-    myPalette.nodeTemplateMap.add("switch", nodeTemplate.switchGraph());
-    myPalette.nodeTemplateMap.add("for", nodeTemplate.forGraph());
-    myPalette.nodeTemplateMap.add("End", nodeTemplate.endGraph());
-    myPalette.nodeTemplateMap.add("Comment", nodeTemplate.commentGraph());*/
+    myPalette = $(go.Palette, "palette") // must name or refer to the DIV HTML element
     myPalette.nodeTemplate = nodeTemplate.defaultGraph();
     myPalette.model = new go.GraphLinksModel(dataModels.modelsData(), dataModels.modelsLinks());
-    myPalette.layout = $(go.GridLayout,
-      {
-        wrappingColumn: 2,
-        wrappingWidth: 400
-      });
+    myPalette.layout = $(go.GridLayout, { wrappingColumn: 2, wrappingWidth: 400 });
     // After the layout, output results:
     myDiagram.addDiagramListener('TextEdited', function () {
-      console.info("CHANGE DIAGRAM ",myDiagram.model.toJSON());
+      console.info("CHANGE DIAGRAM ", myDiagram.model.toJSON());
     });
   }
 
 
   componentDidMount() {
-    //console.log('componentDidMount')
     this.renderCanvas();
   }
 
 
   componentWillUpdate(prevProps) {
     /*console.log(JSON.stringify(prevProps, null, 2))
-  if (this.props.data !== prevProps.data) {
+  if (this.props.data !== prevProps.data) { 
      console.log('Updating 2');
      const model = this.state.myModel;
      const diagram = this.state.myDiagram;
