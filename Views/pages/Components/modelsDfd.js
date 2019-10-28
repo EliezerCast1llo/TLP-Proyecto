@@ -3,7 +3,7 @@ function modelsData() {
         {
             category: "Start",
             text: "Start",
-            color: '#DC3C00',
+            color: '#C0CA33',
             fig: "Circle"
         },
         {
@@ -23,7 +23,7 @@ function modelsData() {
         {
             category: "Var",
             text: "FLOAT",
-            color: 'yellow',
+            color: '#F1C40F',
             fig: "square",
             height: "100"
         },
@@ -41,16 +41,16 @@ function modelsData() {
             fig: "square",
             height: "100"
         },
-        {
+        /*{
             category: "If",
             text: "IF",
             color: 'gray',
             fig: "RightTriangle"
-        }, {
+        }, */{
             key: 'sw',
             category: "switch",
             text: "SWITCH",
-            color: 'gray',
+            color: '#2980B9',
             fig: "octagon"
         },
         /*{
@@ -81,28 +81,47 @@ function modelsData() {
         },*/
         {
             category: "for",
-            color: 'red',
+            color: '#7D3C98',
             text: "For",
-            cond: "condicion",
-            var: "variable",
-            act: "accion",
+            cond: "i<array.legth",
+            var: "i=0",
+            act: "i++",
             fig: "start"
         },
         {
-            text: "Instrucción",
+            category: "Step",
+            text: "instruction",
+            color: "#DC7633",
             fig: "Rectangle"
         }, {
             category: "Conditional",
             text: "If-Else",
+            color: "#117A65",
             fig: "Diamond"
         }, {
             category: "End",
             text: "End",
+            color: "#641E16",
             fig: "Circle"
-        }, {
+        }, /*{
             category: "Comment",
             text: "Comment",
             fig: "File"
+        },*/
+        {
+            category: "EndBlock",
+            color: "#C2185B",
+            text: "EndBlock",
+            count: 0,
+            fig: "Delay"
+        }
+        ,
+        {
+            category: "While",
+            color: "blue",
+            text: "While",
+            count: 0,
+            fig: "start"
         }
     ]
 }

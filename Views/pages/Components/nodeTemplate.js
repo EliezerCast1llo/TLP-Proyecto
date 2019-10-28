@@ -58,8 +58,8 @@ function conditionalGraph() {
         // the main object is a Panel that surrounds a TextBlock with a rectangular Shape
         $(go.Panel, "Auto",
             $(go.Shape, "Diamond",
+                new go.Binding("fill", "color"),
                 {
-                    fill: "#00A9C9",
                     strokeWidth: 0,
                     portId: "",
                     fromLinkable: true,
@@ -86,7 +86,7 @@ function startGraph() {
             $(go.Shape, "Circle",
                 new go.Binding("fill", "color"),
                 {
-                    minSize: new go.Size(40, 40),
+                    minSize: new go.Size(60, 60),
                     strokeWidth: 0,
                     portId: "",
                     fromLinkable: true,
@@ -186,15 +186,15 @@ function switchGraph() {
 function forGraph() {
     return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Shape, "start",
+            new go.Binding("fill", "color"),
             {
-                fill: "red",
                 minSize: new go.Size(80, 30),
                 maxSize: new go.Size(190, 70),
                 strokeWidth: 0
             }),
         $(go.TextBlock, functionDfd.textStyle(),
             {
-                text: "variable:", stroke: "black",
+                text: "Variable:", stroke: "black",
                 alignment: new go.Spot(0.25, 0.2)
             }
         ),
@@ -208,24 +208,22 @@ function forGraph() {
         ),
         $(go.TextBlock, functionDfd.textStyle(),
             {
-                text: "Condicion:",
+                text: "Condition:",
                 stroke: "black",
                 alignment: new go.Spot(0.25, 0.5)
             }
         ),
         $(go.TextBlock,
             {
-                text: "Condicion",
                 stroke: "black",
                 editable: true,
-                alignment: new go.Spot(0.6, 0.5)
+                alignment: new go.Spot(0.7, 0.5)
             },
             new go.Binding("text", "cond").makeTwoWay()
         ),
-        $(go.TextBlock, functionDfd.textStyle(), { text: "Accion:", stroke: "black", alignment: new go.Spot(0.25, 0.8) }),
+        $(go.TextBlock, functionDfd.textStyle(), { text: "Step:", stroke: "black", alignment: new go.Spot(0.25, 0.8) }),
         $(go.TextBlock,
             {
-                text: "Accion",
                 stroke: "black",
                 editable: true,
                 alignment: new go.Spot(0.6, 0.8)
@@ -241,21 +239,20 @@ function forGraph() {
 function endGraph() {
     return $(go.Node, "Spot", functionDfd.nodeStyle(),
         $(go.Panel, "Auto",
-            $(go.Shape, "Circle", {
-                minSize: new go.Size(40, 40),
-                fill: "#DC3C00",
-                strokeWidth: 0,
-                portId: "",
-                fromLinkable: true,
-                toLinkable: true
-            }),
+            $(go.Shape, "Circle",
+                new go.Binding("fill", "color"),
+                {
+                    minSize: new go.Size(60, 60),
+                    strokeWidth: 0,
+                    portId: "",
+                    fromLinkable: true,
+                    toLinkable: true
+                }),
             $(go.TextBlock, "End", functionDfd.textStyle(),
                 new go.Binding("text"))
         ),
         // three named ports, one on each side except the bottom, all input only:
         functionDfd.makePort("T", go.Spot.Top, go.Spot.Top, false, true),
-        functionDfd.makePort("L", go.Spot.Left, go.Spot.Left, false, true),
-        functionDfd.makePort("R", go.Spot.Right, go.Spot.Right, false, true)
     )
 }
 
@@ -292,11 +289,11 @@ function groupGraph() {
                 {
                     fill: "rgba(128,128,128,0.33)",
                     name: "PH",
-                },
-                new go.Binding("desiredSize", "size", go.Size.parse).makeTwoWay(go.Size.stringify)),
+                    strokeWidth: 2
+                }),
             $(go.Placeholder,    // represents the area of all member parts,
                 { padding: 3 }),
-            $(go.TextBlock, { alignment: go.Spot.Right, font: "Bold 12pt Sans-Serif" },
+            $(go.TextBlock, {  font: "Bold 12pt Sans-Serif" },
                 new go.Binding("text"))
         ),
 
@@ -319,7 +316,7 @@ function addNodeAndLink(e, obj) {
 
     let fromData = fromNode.data;
     // create a new "State" data object, positioned off to the right of the adorned Node
-    let toData = { text: "instruccion" };
+    let toData = { text: "instruccion", category: "Step", color: "#DC7633" };
     let p = fromNode.location;
     console.log(p);
     toData.loc = p.x + " " + p.y - 195;  // the "loc" property is a string, not a Point object
@@ -339,6 +336,73 @@ function addNodeAndLink(e, obj) {
     diagram.commitTransaction("Add State");
 }
 
+
+function endBlockGraph() {
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
+        $(go.Panel, "Auto",
+            $(go.Shape, "Delay",
+                new go.Binding("fill", "color"),
+                {
+                    minSize: new go.Size(40, 40),
+                    strokeWidth: 0,
+                    portId: "",
+                    fromLinkable: true,
+                    toLinkable: true
+                }),
+            $(go.TextBlock, functionDfd.textStyle(), { editable: true },
+                new go.Binding("text").makeTwoWay())
+        ),
+
+        functionDfd.makePort("T", go.Spot.Top, go.Spot.TopSide, false, true),
+        functionDfd.makePort("L", go.Spot.Left, go.Spot.LeftSide, true, true),
+        functionDfd.makePort("R", go.Spot.Right, go.Spot.RightSide, true, true),
+        functionDfd.makePort("B", go.Spot.Bottom, go.Spot.BottomSide, true, false)
+    )
+}
+
+function stepGraph() {
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
+        $(go.Panel, "Auto",
+            $(go.Shape, "Rectangle",
+                new go.Binding("fill", "color"),
+                {
+                    minSize: new go.Size(40, 40),
+                    strokeWidth: 0,
+                    portId: "",
+                    fromLinkable: true,
+                    toLinkable: true
+                }),
+            $(go.TextBlock, functionDfd.textStyle(), { editable: true },
+                new go.Binding("text").makeTwoWay())
+        ),
+
+        functionDfd.makePort("T", go.Spot.Top, go.Spot.Top, false, true),
+        functionDfd.makePort("B", go.Spot.Bottom, go.Spot.Bottom, true, false)
+    )
+}
+
+
+function whileGraph() {
+    return $(go.Node, "Spot", functionDfd.nodeStyle(),
+        $(go.Panel, "Auto",
+            $(go.Shape, "start",
+                new go.Binding("fill", "color"),
+                {
+                    minSize: new go.Size(40, 40),
+                    strokeWidth: 0,
+                    portId: "",
+                    fromLinkable: true,
+                    toLinkable: true
+                }),
+            $(go.TextBlock, functionDfd.textStyle(), { editable: true },
+                new go.Binding("text").makeTwoWay())
+        ),
+
+        functionDfd.makePort("T", go.Spot.Top, go.Spot.Top, false, true),
+        functionDfd.makePort("B", go.Spot.Bottom, go.Spot.Bottom, true, false)
+    )
+}
+
 module.exports = {
     defaultGraph,
     conditionalGraph,
@@ -351,5 +415,9 @@ module.exports = {
     endGraph,
     commentGraph,
     groupGraph,
-    addNodeAndLink
+    addNodeAndLink,
+    endBlockGraph,
+    stepGraph,
+    whileGraph
+
 }

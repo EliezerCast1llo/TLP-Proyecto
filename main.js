@@ -8,7 +8,7 @@ const isDev = require('electron-is-dev')
 const prepareNext = require('electron-next')
 
 // Prepare the renderer once the app is ready
-app.on('ready', async() => {
+app.on('ready', async () => {
     await prepareNext('./Views')
 
     const mainWindow = new BrowserWindow({
@@ -27,7 +27,7 @@ app.on('ready', async() => {
             protocol: 'file:',
             slashes: true
         })
-
+    //mainWindow.setMenuBarVisibility(false)
     mainWindow.loadURL(url)
 })
 

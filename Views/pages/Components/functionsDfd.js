@@ -48,9 +48,10 @@ function linkTemplate() {
             $(go.Shape, "RoundedRectangle", // the label shape
                 {
                     fill: "#F8F8F8",
-                    strokeWidth: 0
+                    strokeWidth: 0,
+                    minSize: new go.Size(40, 30),
                 }),
-            $(go.TextBlock, "Yes", // the label
+            $(go.TextBlock, "??", // the label
                 {
                     textAlign: "center",
                     font: "10pt helvetica, arial, sans-serif",
