@@ -20,7 +20,7 @@
         "bootstrap": "^4.3.1",
         "flatten": "^1.0.2",
         "gojs": "^2.0.17",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "next": "^9.1.1",
         "react": "^16.10.2",
         "react-bootstrap": "^1.0.0-beta.14",
